@@ -1,19 +1,19 @@
 const projectCardTmpl =
-    "<div class=\"project-card {{availability}}\">\n" +
-    "{{note}}" +
-    "    <div class=\"project-title\">{{title}}</div>\n" +
-    "    <div class=\"project-date\">{{date}}</div>\n" +
-    "    <p class=\"project-description\">{{description}}</p>\n" +
-    "    <div class=\"project-tags\">Tags:&nbsp;{{tags}}</div>\n" +
-    "    <div class=\"project-btn-group btn-group\">\n" +
-    "        {{buttons}}\n" +
-    "    </div>\n" +
-    "</div>\n";
+    '<div class="project-card {{availability}}">\n' +
+    '{{note}}' +
+    '    <div class="project-title">{{title}}</div>\n' +
+    '    <div class="project-date">{{date}}</div>\n' +
+    '    <p class="project-description">{{description}}</p>\n' +
+    '    <div class="project-tags">Tags:&nbsp;{{tags}}</div>\n' +
+    '    <div class="project-btn-group btn-group">\n' +
+    '        {{buttons}}\n' +
+    '    </div>\n' +
+    '</div>\n';
 
-const projectCardNoteTmpl = "<div class=\"project-note-padding\"></div><div class=\"project-note\">~ {{note}} ~</div>";
-const projectCardBtnTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"btn btn-sm project-btn\">{{name}}</a>\n";
-const projectCardTagTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"project-tag\">{{tag}}</a>";
-const projectSeeMoreTmpl = "<div class=\"project-see-more-container\"><a href=\"projects.html{{link}}\" class=\"project-see-more btn btn-sm project-btn\">{{text}}</a></div>";
+const projectCardNoteTmpl = '<div class="project-note-padding"></div><div class="project-note">~ {{note}} ~</div>';
+const projectCardBtnTmpl = '<a href="{{link}}" target="_blank" class="btn btn-sm project-btn">{{name}}</a>\n';
+const projectCardTagTmpl = '<a href="{{link}}" target="_blank" class="project-tag">{{tag}}</a>';
+const projectSeeMoreTmpl = '<div class="project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn btn-sm project-btn">{{text}}</a></div>';
 
 function loadAllProjects(container, limit, seemore) {
     if (limit === undefined) {
@@ -36,7 +36,9 @@ function loadProjectsByTag(container, tag, limit, seemore) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].tags.includes(tag)) {
             var $projectCard = $(getCardHtml(PROJECTS[i]));
+            $projectCard.hide();
             $projectCard.appendTo(container);
+            $projectCard.slideDown(400);
             ++loaded;
 
             if (limit > 0 && loaded >= limit) {
@@ -88,7 +90,9 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category !== category) {
             var $projectCard = $(getCardHtml(PROJECTS[i]));
+            $projectCard.hide();
             $projectCard.appendTo(container);
+            $projectCard.slideDown(400);
             ++loaded;
 
             if (limit > 0 && loaded >= limit) {

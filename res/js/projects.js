@@ -29,7 +29,7 @@ const PROJECTS = [
     {
         title: "Personal Website",
         date: "2018 - Present",
-        description: "The website you are looking at! Originally created to showcase personal and school projects, occasionally used as a playground to test static website techniques I come across.",
+        description: "The website you are looking at! Originally created to showcase personal and school projects, occasionally used as a playground to test static website techniques I come across.<br /><br />The website currently uses jQuery and Bootstrap, but all other assets, styles, and code are created by me.",
         source: AVAILABLE,
         category: "Personal",
         buttons: [
@@ -60,7 +60,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -84,7 +84,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -106,7 +106,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -127,7 +127,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -151,7 +151,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -175,7 +175,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -200,7 +200,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -225,7 +225,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -250,7 +250,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -274,7 +274,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -297,7 +297,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -323,7 +323,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -345,7 +345,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -368,7 +368,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -422,7 +422,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             }
         ],
         tags: [
@@ -441,7 +441,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "request-source.html"
+                link: "about.html#source-request"
             }
         ],
         tags: [

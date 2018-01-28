@@ -2,7 +2,7 @@
 
 body {
     font-family: "Trebuchet MS", Verdana, Arial;
-    min-width: 575px;
+    min-width: 600px;
     background-color: #3a3a3c;
 }
 
@@ -17,7 +17,7 @@ body.sticky {
     position: relative;
 }
 
-@media(min-width: 1500px) {
+@media (min-width: 1500px) {
     .halftone {
         background: #d8d8d9 url("../img/halftone.png") fixed top center;
         background-size: 100%;
@@ -40,19 +40,33 @@ body.sticky {
 }
 
 .nav-bar-wrapper {
-    width: 100%;
+    transition: all 0.25s ease;
+    width: 80%;
+    margin: 0 auto;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    min-width: 575px;
+    max-width: 875px;
+}
+
+@media (max-width: 875px) {
+    .nav-bar-wrapper {
+        width: 100%;
+    }
 }
 
 .nav-bar-wrapper.sticky {
     transition: all 0.25s ease;
+    width: 100%;
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);
+    max-width: 100%;
 }
 
 .nav-bar {
@@ -61,6 +75,11 @@ body.sticky {
     padding: 0;
     height: 100%;
     width: 100%;
+}
+
+div.nav-bar-wrapper.sticky div.nav-bar {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .nav-bar a {
@@ -76,6 +95,20 @@ body.sticky {
 
 .nav-bar a:hover {
     background-color: #000000;
+}
+
+.nav-bar-projects-pill {
+    display: inline-block;
+    padding: 1px 7px;
+    font-size: 12px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 10px;
+    white-space: nowrap;
+    min-width: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0 0 0 0.25em;
 }
 
 /* Footer */
@@ -113,9 +146,31 @@ body.sticky {
 }
 
 .section-content h2 {
-    margin: 1.5em 0 0 0;
+    margin: 1.5em 0 0.2em 0;
     padding: 0 0 0.25em 0;
     border-bottom: 1px solid #d8d8d9;
+}
+
+.section-table {
+    border-radius: 0.25em;
+    border: 1px solid #d8d8d9;
+    box-shadow: 0 0.25em 0.75em 0 rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.section-table td {
+    padding: 0.25em 0.5em;
+    margin: 0;
+}
+
+.section-table tr {
+    padding: 0;
+    margin: 0;
+}
+
+.section-table td:nth-child(odd) {
+    border-right: 1px solid #d8d8d9;
 }
 
 /* Project Containers */
