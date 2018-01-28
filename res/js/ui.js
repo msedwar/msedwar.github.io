@@ -4,7 +4,7 @@ const navTmpl = '<div class="nav-bar-wrapper js-navbar">\n' +
     '                    <a href="projects.html">Projects <span class="nav-bar-projects-pill js-navbar-projects">0</span></a>\n' +
     '                    <a href="about.html">About</a>\n' +
     '                    <a href="awards.html">Awards</a>\n' +
-    '                    <a href="index.html">More...</a>\n' +
+    // '                    <a href="index.html">More...</a>\n' +
     '                    <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank" style="float:right;">LinkedIn</a>\n' +
     '                </div>\n' +
     '            </div>';
