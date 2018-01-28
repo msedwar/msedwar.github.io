@@ -4,98 +4,58 @@
         <meta charset="utf-8" />
         <title>Matthew Edwards - Portfolio</title>
 
-        <style>
-        body {
-            font-family: "Trebuchet MS", Verdana, Arial;
-            font-size: 16px;
-            margin: 0;
-            background: #444;
-        }
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="res/css/main.css" rel="stylesheet">
 
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            height: 64px;
-            width: 60%;
-            text-align: left;
-            padding: 32px 20% 0px 20%;
-            background: #3bb1f5;  
-            background: -webkit-linear-gradient(left top, #3bb1f5, #0033cc);
-            background: -o-linear-gradient(bottom right, #3bb1f5, #0033cc);
-            background: -moz-linear-gradient(bottom right, #3bb1f5, #0033cc);
-            background: linear-gradient(to bottom right, #3bb1f5, #0033cc);
-            color: #fff;
-        }
-
-        .section {
-            width: 60%;
-            margin: 0;
-            padding: 20px 20%;
-            background-color: #fff;
-        }
-
-        .section-header {
-            text-align: center;
-            width: 60%;
-            margin: 0;
-            padding: 20px 20%;
-            background-color: #fff;
-        }
-
-        .section-dark {
-            background: #444;  
-            background: -webkit-linear-gradient(left top, #777, #444);
-            background: -o-linear-gradient(bottom right, #777, #444);
-            background: -moz-linear-gradient(bottom right, #777, #444);
-            background: linear-gradient(to bottom right, #777, #444);
-            color: #fff;
-        }
-
-        .section-time {
-            float: right;
-        }
-
-        .section:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .section table {
-            width: 80%;
-            margin: 0 auto;
-            border: none;
-        }
-
-        .section table td {
-            border: none;
-        }
-
-        .section table td:nth-child(odd) {
-            font-style: italic;
-        }
-
-        .footer {
-            width: 60%;
-            text-align: center;
-            color: #fff;
-            padding-top: 20px;
-            height: 108px;
-            width: 100%;
-            background: #444;  
-            background: -webkit-linear-gradient(left top, #777, #444);
-            background: -o-linear-gradient(bottom right, #777, #444);
-            background: -moz-linear-gradient(bottom right, #777, #444);
-            background: linear-gradient(to bottom right, #777, #444);
-        }
-        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="res/js/projects.js"></script>
+        <script src="res/js/main.js"></script>
     </head>
-    <body>
+    <body data-spy="scroll">
 
-        <div class="header">Matthew Edwards</div>
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p>Student at University of Michigan, studying Computer Science in the College of Engineering</p>
-            <p>See more experience on my <a href="https://www.linkedin.com/in/matthew-edwards">LinkedIn</a></p>
+        <div class="halftone">
+            <div class="header">
+                Matthew&nbsp;Edwards
+            </div>
         </div>
+
+        <div class="section-container">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>I am a student at the University of Michigan, studying Computer Science in the College of Engineering. I am also double-minoring in Math and Entrepreneurship.</p>
+                <p>See more of my experience on my <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank">LinkedIn profile</a>.</p>
+            </div>
+            <div class="section-content">
+                <h2>Personal Projects</h2>
+                <p>Starting in 2018, I will have about 9 years of programming experience. My preferred programming languages include Java and C++, but I have solid experience in everything from ARM Assembly to PHP to Python to Swift.</p>
+                <p>My typical projects include those started for my own learning purposes or tools I have created to help myself in my own workflow. Game programming is also a personal hobby and I have been known to participate in <a href="https://ldjam.com/">Ludum Dare</a>.</p>
+                <p>A collection of various projects (those that are completed enough to talk about) can be found below:</p>
+            </div>
+        </div>
+        <div class="project-container" id="personal-projects"></div>
+
+        <div class="section-container">
+            <div class="section-content">
+                <h2>School Projects</h2>
+                <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine:</p>
+            </div>
+        </div>
+        <div class="project-container" id="school-projects"></div>
+
+        <div class="footer">
+            <div class="footer-container">
+                &copy; Copyright 2018 by Matthew Edwards, All Rights Reserved
+            </div>
+        </div>
+
+        <script>
+            $(loadProjectsByCategory($('#personal-projects'), 'Personal', 5));
+            $(loadProjectsExceptCategory($('#school-projects'), 'Personal', 5));
+        </script>
+
+        <!--
         <div class="section">
             <h3>Skills</h3>
             <table>
@@ -121,78 +81,7 @@
                 </tr>
             </table>
         </div>
-        <div class="section-header section-dark">
-            <h2>Personal Projects</h2>
-        </div>
-        <div class="section">
-            <div class="section-time">2017</div>
-            <h3>C++ Linter</h3>
-            <h4>Code linter for C++ written in Python</h4>
-            <ul>
-                <li>Customizable console-based code linter for personal projects</li>
-                <li>Source Available on Request</li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-time">2015 - Present</div>
-            <h3>Decentralized Election System</h3>
-            <h4>National Award: Cutler-Bell Prize in High School Computing (One of 4 winners, 2016)</h4>
-            <ul>
-                <li>Decentralized E-Voting System based on the Bitcoin algorithm</li>
-                <li>Link to <a href="http://mjolnircommando.github.io/DES/">Project</a></li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-time">2014 - Present</div>
-            <h3>MJGL</h3>
-            <h4>Java Gaming Library, using OpenGL bindings</h4>
-            <ul>
-                <li>Math, Entity, Rendering, and Utility library to build games in Java</li>
-                <li>Source Available on Request</li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-time">2013</div>
-            <h3>Trench</h3>
-            <h4>Java Applet Game</h4>
-            <ul>
-                <li>Small applet-based casual game</li>
-                <li>Source Available on Request</li>
-            </ul>
-        </div>
-        <div class="section">
-            <div class="section-time">2011 - 2013</div>
-            <h3>MineConomy</h3>
-            <h4>Third Most Downloaded Minecraft Server Plugin Globally in 2012</h4>
-            <ul>
-                <li>Minecraft Java Server plugin using Bukkit</li>
-                <li>Source Available on Request, project page on <a href="http://dev.bukkit.org/server-mods/mineconomy">DevBukkit</a></li>
-            </ul>
-        </div>
-        <div class="section-header section-dark">
-            <h2>School Projects</h2>
-        </div>
-        <div class="section">
-            <div class="section-time">2016</div>
-            <h3>Data Structures and Algorithms</h3>
-            <h4>EECS 281</h4>
-            <p>Five C++ Projects written throughout the Winter 2017 semester, source available on request</p>
-        </div>
-        <div class="section">
-            <div class="section-time">2016</div>
-            <h3>Introduction to Computer Organization</h3>
-            <h4>EECS 370</h4>
-            <p>Four C and LC-2K (University of Michigan Assembly Language) Projects written throughout the Winter 2017 semester, source available on request</p>
-        </div>
-        <div class="section">
-            <div class="section-time">2016</div>
-            <h3>Programming and Data Structures</h3>
-            <h4>EECS 280</h4>
-            <p>Five C++ Projects written throughout the Fall 2016 semester, source available on request</p>
-        </div>
-        <div class="footer">
-            &copy; Copyright 2017 by Matthew Edwards
-        </div>
+        -->
 
     </body>
 </html>
