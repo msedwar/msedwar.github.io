@@ -6,6 +6,11 @@ body {
     background-color: #3a3a3c;
 }
 
+body.sticky {
+    transition: all 0.25s ease;
+    padding-top: 50px;
+}
+
 .halftone {
     height: 200px;
     background: #d8d8d9 url("../img/halftone.png") fixed no-repeat top center;
@@ -32,6 +37,45 @@ body {
     width: 14em;
     position: absolute;
     bottom: 80px;
+}
+
+.nav-bar-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.nav-bar-wrapper.sticky {
+    transition: all 0.25s ease;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-bar {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 0.55em 1em 0.5em 1em;
+    font-size: 18px;
+}
+
+.nav-bar a:hover {
+    background-color: #000000;
 }
 
 /* Footer */
@@ -154,10 +198,15 @@ body {
     background-color: #4c555d;
 }
 
-.project-see-more {
+.project-see-more-container {
     display: block;
-    margin: 2em auto 1em auto;
-    width: fit-content;
+    margin: 2em 0 1em 0;
+    text-align: center;
+}
+
+.project-see-more {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .project-src-available {

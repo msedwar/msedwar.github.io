@@ -13,6 +13,7 @@ const projectCardTmpl =
 const projectCardNoteTmpl = "<div class=\"project-note-padding\"></div><div class=\"project-note\">~ {{note}} ~</div>";
 const projectCardBtnTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"btn btn-sm project-btn\">{{name}}</a>\n";
 const projectCardTagTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"project-tag\">{{tag}}</a>";
+const projectSeeMoreTmpl = "<div class=\"project-see-more-container\"><a href=\"projects.html{{link}}\" class=\"project-see-more btn btn-sm project-btn\">{{text}}</a></div>";
 
 function loadAllProjects(container, limit, seemore) {
     if (limit === undefined) {
@@ -105,7 +106,10 @@ function addSeeMore(container, text, link) {
     if (link === undefined) {
         link = "";
     }
-    $("<a href=\"projects.html" + link + "\" class=\"project-see-more btn btn-sm project-btn\">" + text + "</a>").appendTo(container);
+    $(projectSeeMoreTmpl
+        .replace("{{link}}", link)
+        .replace("{{text}}", text)
+    ).appendTo(container);
 }
 
 function getTotalProjects() {
