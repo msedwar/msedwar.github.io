@@ -14,11 +14,23 @@ const projectCardNoteTmpl = "<div class=\"project-note-padding\"></div><div clas
 const projectCardBtnTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"btn btn-sm project-btn\">{{name}}</a>\n";
 const projectCardTagTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"project-tag\">{{tag}}</a>";
 
-function loadAllProjects(container, limit = 10, seemore = true) {
+function loadAllProjects(container, limit, seemore) {
+    if (limit === undefined) {
+        limit = 10;
+    }
+    if (seemore === undefined) {
+        seemore = true;
+    }
     loadProjectsExceptCategory(container, "", limit, seemore);
 }
 
-function loadProjectsByTag(container, tag, limit = 10, seemore = true) {
+function loadProjectsByTag(container, tag, limit, seemore) {
+    if (limit === undefined) {
+        limit = 10;
+    }
+    if (seemore === undefined) {
+        seemore = true;
+    }
     let loaded = 0;
     for (let i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].tags.includes(tag)) {
@@ -37,7 +49,13 @@ function loadProjectsByTag(container, tag, limit = 10, seemore = true) {
     }
 }
 
-function loadProjectsByCategory(container, category, limit = 10, seemore = true) {
+function loadProjectsByCategory(container, category, limit, seemore) {
+    if (limit === undefined) {
+        limit = 10;
+    }
+    if (seemore === undefined) {
+        seemore = true;
+    }
     let loaded = 0;
     for (let i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category === category) {
@@ -58,7 +76,13 @@ function loadProjectsByCategory(container, category, limit = 10, seemore = true)
     }
 }
 
-function loadProjectsExceptCategory(container, category, limit = 10, seemore = true) {
+function loadProjectsExceptCategory(container, category, limit, seemore) {
+    if (limit === undefined) {
+        limit = 10;
+    }
+    if (seemore === undefined) {
+        seemore = true;
+    }
     let loaded = 0;
     for (let i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category !== category) {
