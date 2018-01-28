@@ -11,7 +11,7 @@ const PROJECTS = [
     {
         title: "MLint",
         date: "2018 - Present",
-        description: "MLint is a code linter for C++. It is written in Python and based on Google's cpplint project.",
+        description: "MLint is a code linter for C++. It is written in Python and based on Google's <a href=\"https://github.com/google/styleguide/tree/gh-pages/cpplint\" target=\"_blank\">cpplint</a> project.",
         source: AVAILABLE,
         category: "Personal",
         language: "Python",

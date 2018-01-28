@@ -12,12 +12,13 @@ const breakdownLabelContainerTmpl = '<div class="breakdown-label-container"></di
 const breakdownBarTmpl = '<div class="progress"></div>';
 
 const LANG_COLOR = {
-    "Java": "#b07219",
+    "Java": "#e9a823",
     "Javascript": "#f1e05a",
-    "C++": "#f34b7d",
-    "C": "#555555",
-    "Python": "#3572A5",
-    "Other": "#89e051"
+    "C++": "#3572A5",
+    "C": "#f34b7d",
+    "Python": "#654fa5",
+    "Shell": "#89e051",
+    "Other": "#555555"
 };
 
 function addNav() {
@@ -60,7 +61,7 @@ function addLanguageBreakdown(container) {
                 + ';"></div>'
             );
             $langBar.appendTo($bar);
-            $langBar.animate({"width": percent + "%"}, 2000);
+            $langBar.animate({"width": percent + "%"}, 1500, "swing");
             var $langLabel = $('<div class="breakdown-label"><span class="breakdown-label-pill" style="background-color:'
                 + (LANG_COLOR.hasOwnProperty(sorted[i][0]) ? LANG_COLOR[sorted[i][0]] : LANG_COLOR["Other"]) + ';"></span>' + sorted[i][0] + '<span class="breakdown-label-percent">' + percent + '%</span></div>');
             $langLabel.appendTo($breakdownLabelContainer);
