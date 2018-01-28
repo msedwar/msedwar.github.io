@@ -1,0 +1,52 @@
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Matthew Edwards - Projects</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="res/css/main.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="res/js/projects.js"></script>
+        <script src="res/js/main.js"></script>
+        <script src="res/js/ui.js"></script>
+    </head>
+    <body data-spy="scroll">
+
+        <div class="halftone">
+            <div class="header">
+                Matthew&nbsp;Edwards
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-content js-projects-title-container">
+                <h1>Awards</h1>
+            </div>
+            <div class="section-content js-projects-title-container">
+                <h2>Cutler-Bell Prize in High School Computing (2015)</h2>
+                <p>From the ACM website:</p>
+                <p>
+                    <blockquote>
+                        The ACM/CSTA Cutler-Bell Prize seeks to promote the field of computer science and encourage its study, as well as to empower young and aspiring learners to pursue computing challenges outside of the traditional classroom environment. The award was established by David Cutler and Gordon Bell.
+                    </blockquote>
+                </p>
+                <p>I was one of the four <a href="https://awards.acm.org/about/2015-cutler-bell-prize">National Winners</a> of the Cutler-Bell Prize. My project was a software artifact demonstrating the viability for a decentralized system to facilitate electronic voting. This was accomplished through the use of BlockChain technology (popularized by Bitcoin). The project page can be found <a href="https://mjolnircommando.github.io/DES/">here</a>.</p>
+                <br />
+                <div class="js-project-card"></div>
+                <script>
+                    loadProjectByTitle($('.js-project-card'), "Decentralized Election System");
+                </script>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-container">
+                &copy; Copyright 2018 by Matthew Edwards, All Rights Reserved
+            </div>
+        </div>
+    </body>
+</html>

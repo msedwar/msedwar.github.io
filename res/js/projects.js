@@ -76,6 +76,26 @@ const PROJECTS = [
             "C++"
         ]
     },
+    {
+        title: "Git Workflow Scripts",
+        date: "Winter 2018",
+        description: "A collection of Bash scripts, Makefiles, and git-hooks to improve my own workflow (with a focus on C++).",
+        source: UNAVAILABLE,
+        category: "Personal",
+        language: "Shell",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            }
+        ],
+        tags: [
+            "Git",
+            "Bash",
+            "Python",
+            "Workflow"
+        ]
+    },
 
     // School ----------------------------------------------------------------------------------------------------------
 
