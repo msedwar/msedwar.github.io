@@ -31,10 +31,10 @@ function loadProjectsByTag(container, tag, limit, seemore) {
     if (seemore === undefined) {
         seemore = true;
     }
-    let loaded = 0;
-    for (let i = 0; i < PROJECTS.length; ++i) {
+    var loaded = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].tags.includes(tag)) {
-            let $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i]));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -56,10 +56,10 @@ function loadProjectsByCategory(container, category, limit, seemore) {
     if (seemore === undefined) {
         seemore = true;
     }
-    let loaded = 0;
-    for (let i = 0; i < PROJECTS.length; ++i) {
+    var loaded = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category === category) {
-            let $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i]));
             $projectCard.hide();
             $projectCard.appendTo(container);
             $projectCard.slideDown(400);
@@ -83,10 +83,10 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     if (seemore === undefined) {
         seemore = true;
     }
-    let loaded = 0;
-    for (let i = 0; i < PROJECTS.length; ++i) {
+    var loaded = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category !== category) {
-            let $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i]));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -101,7 +101,10 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     }
 }
 
-function addSeeMore(container, text, link = "") {
+function addSeeMore(container, text, link) {
+    if (link === undefined) {
+        link = "";
+    }
     $("<a href=\"projects.html" + link + "\" class=\"project-see-more btn btn-sm project-btn\">" + text + "</a>").appendTo(container);
 }
 
@@ -110,7 +113,7 @@ function getTotalProjects() {
 }
 
 function getCardHtml(project) {
-    let availability = "";
+    var availability = "";
     switch (project.source) {
         case AVAILABLE:
             availability = "project-src-available";
@@ -129,7 +132,7 @@ function getCardHtml(project) {
             break;
     }
 
-    let card = projectCardTmpl
+    var card = projectCardTmpl
         .replace("{{availability}}", availability)
         .replace("{{title}}", project.title)
         .replace("{{note}}", getNoteHtml(project.note))
@@ -154,8 +157,8 @@ function getButtonsHtml(buttons) {
         return "";
     }
 
-    let btnHtml = "";
-    for (let i = 0; i < buttons.length; ++i) {
+    var btnHtml = "";
+    for (var i = 0; i < buttons.length; ++i) {
         btnHtml += projectCardBtnTmpl
             .replace("{{name}}", buttons[i].name)
             .replace("{{link}}", buttons[i].link);
@@ -168,8 +171,8 @@ function getTagsHtml(tags) {
         return "";
     }
 
-    let tagHtml = "";
-    for (let i = 0; i < tags.length; ++i) {
+    var tagHtml = "";
+    for (var i = 0; i < tags.length; ++i) {
         tagHtml += projectCardTagTmpl
             .replace("{{link}}", "projects.html?tag=" + tags[i])
             .replace("{{tag}}", tags[i]);
