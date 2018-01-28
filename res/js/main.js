@@ -12,7 +12,7 @@ const projectCardTmpl =
 
 const projectCardNoteTmpl = "<div class=\"project-note-padding\"></div><div class=\"project-note\">~ {{note}} ~</div>";
 const projectCardBtnTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"btn btn-sm project-btn\">{{name}}</a>\n";
-const projectCardTagTmpl = "<a href=\"\" class=\"project-tag\">{{tag}}</a>";
+const projectCardTagTmpl = "<a href=\"{{link}}\" target=\"_blank\" class=\"project-tag\">{{tag}}</a>";
 
 function loadAllProjects(container, limit = 10, seemore = true) {
     loadProjectsExceptCategory(container, "", limit, seemore);
@@ -33,7 +33,7 @@ function loadProjectsByTag(container, tag, limit = 10, seemore = true) {
     }
 
     if (seemore) {
-        addSeeMore(container, "See more projects tagged with \"" + tag + "\"");
+        addSeeMore(container, "See more projects tagged with \"" + tag + "\"", "?tag=" + tag);
     }
 }
 
@@ -54,7 +54,7 @@ function loadProjectsByCategory(container, category, limit = 10, seemore = true)
     }
 
     if (seemore) {
-        addSeeMore(container, "See more " + category + " projects");
+        addSeeMore(container, "See more " + category + " projects", "?category=" + category);
     }
 }
 
@@ -78,7 +78,7 @@ function loadProjectsExceptCategory(container, category, limit = 10, seemore = t
 }
 
 function addSeeMore(container, text, link = "") {
-    $("<a href=\"" + link + "\" class=\"project-see-more btn btn-sm project-btn\">" + text + "</a>").appendTo(container);
+    $("<a href=\"projects.html" + link + "\" class=\"project-see-more btn btn-sm project-btn\">" + text + "</a>").appendTo(container);
 }
 
 function getTotalProjects() {
@@ -147,10 +147,31 @@ function getTagsHtml(tags) {
     let tagHtml = "";
     for (let i = 0; i < tags.length; ++i) {
         tagHtml += projectCardTagTmpl
+            .replace("{{link}}", "projects.html?tag=" + tags[i])
             .replace("{{tag}}", tags[i]);
         if (i + 1 < tags.length) {
             tagHtml += ", ";
         }
     }
     return tagHtml;
+}
+
+function parse_query_string(query) {
+    var vars = query.split("&");
+    var query_string = {};
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+            query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+            var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+            query_string[pair[0]] = arr;
+        // If third or later entry with this name
+        } else {
+            query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+    }
+    return query_string;
 }

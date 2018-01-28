@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Matthew Edwards - Projects</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="res/css/main.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="res/js/projects.js"></script>
+        <script src="res/js/main.js"></script>
+    </head>
+    <body data-spy="scroll">
+
+        <div class="halftone">
+            <div class="header">
+                Matthew&nbsp;Edwards
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-content">
+                <h1 class="js-projects-title">Projects</h1>
+            </div>
+        </div>
+        <div class="project-container js-projects"></div>
+
+        <div class="footer">
+            <div class="footer-container">
+                &copy; Copyright 2018 by Matthew Edwards, All Rights Reserved
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                let qs = parse_query_string(location.search.substr(1));
+                if (qs.hasOwnProperty("category")) {
+                    $('.js-projects-title').html("Projects in Category \"" + qs.category + "\"");
+                    loadProjectsByCategory($('.js-projects'), qs.category, 0, false);
+                } else if (qs.hasOwnProperty("tag")) {
+                    $('.js-projects-title').html("Projects tagged with \"" + qs.tag + "\"");
+                    loadProjectsByTag($('.js-projects'), qs.tag, 0, false);
+                } else {
+                    $('.js-projects-title').html("All Projects");
+                    loadAllProjects($('.js-projects'), 0, false);
+                }
+            });
+        </script>
+
+    </body>
+</html>

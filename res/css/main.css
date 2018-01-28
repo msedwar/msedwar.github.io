@@ -3,17 +3,18 @@
 body {
     font-family: "Trebuchet MS", Verdana, Arial;
     min-width: 575px;
+    background-color: #3a3a3c;
 }
 
 .halftone {
     height: 200px;
-    background: #d8d8d9 url("../img/halftone.png") scroll no-repeat center center;
+    background: #d8d8d9 url("../img/halftone.png") fixed no-repeat top center;
     position: relative;
 }
 
 @media(min-width: 1500px) {
     .halftone {
-        background: #d8d8d9 url("../img/halftone.png") scroll center center;
+        background: #d8d8d9 url("../img/halftone.png") fixed top center;
         background-size: 100%;
     }
 }
@@ -30,7 +31,7 @@ body {
     margin: 0;
     width: 14em;
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
 }
 
 /* Footer */
@@ -57,7 +58,7 @@ body {
 .section-container {
     background-color: #ffffff;
     margin: 0;
-    padding: 3em 0;
+    padding: 1.5em 0;
 }
 
 .section-content {
@@ -68,6 +69,7 @@ body {
 }
 
 .section-content h2 {
+    margin: 1.5em 0 0 0;
     padding: 0 0 0.25em 0;
     border-bottom: 1px solid #d8d8d9;
 }
@@ -79,7 +81,7 @@ body {
     border-top: 1px solid #d5d5d7;
     border-bottom: 1px solid #d5d5d7;
     margin: 0;
-    padding: 1em 0;
+    padding: 2em 0;
     width: 100%;
 }
 
@@ -154,7 +156,7 @@ body {
 
 .project-see-more {
     display: block;
-    margin: 0.5em auto;
+    margin: 2em auto 1em auto;
     width: fit-content;
 }
 
