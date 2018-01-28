@@ -37,7 +37,7 @@
 
         <script>
             $(function () {
-                let qs = parse_query_string(location.search.substr(1));
+                var qs = parse_query_string(location.search.substr(1));
                 if (qs.hasOwnProperty("category")) {
                     $('.js-projects-title').html("Projects in Category \"" + qs.category + "\"");
                     loadProjectsByCategory($('.js-projects'), qs.category, 0, false);
