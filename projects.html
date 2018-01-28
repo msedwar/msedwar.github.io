@@ -25,6 +25,7 @@
         <div class="section-container">
             <div class="section-content">
                 <h1 class="js-projects-title">Projects</h1>
+                <i class="js-projects-found">0 projects found.</i>
             </div>
         </div>
         <div class="project-container js-projects"></div>
@@ -40,12 +41,15 @@
                 var qs = parse_query_string(location.search.substr(1));
                 if (qs.hasOwnProperty("category")) {
                     $('.js-projects-title').html("Projects in Category \"" + qs.category + "\"");
+                    $('.js-projects-found').html(getProjectsWithCategory(qs.category) + " projects found.");
                     loadProjectsByCategory($('.js-projects'), qs.category, 0, false);
                 } else if (qs.hasOwnProperty("tag")) {
                     $('.js-projects-title').html("Projects tagged with \"" + qs.tag + "\"");
+                    $('.js-projects-found').html(getProjectsWithTag(qs.tag) + " projects found.");
                     loadProjectsByTag($('.js-projects'), qs.tag, 0, false);
                 } else {
                     $('.js-projects-title').html("All Projects");
+                    $('.js-projects-found').html(getTotalProjects() + " projects found.");
                     loadAllProjects($('.js-projects'), 0, false);
                 }
             });

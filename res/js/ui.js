@@ -1,4 +1,3 @@
-
 const navTmpl = '<div class="nav-bar-wrapper js-navbar">\n' +
     '                <div class="nav-bar">\n' +
     '                    <a href="index.html">Home</a>\n' +

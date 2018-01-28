@@ -157,6 +157,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     box-shadow: 0 0.25em 0.75em 0 rgba(0, 0, 0, 0.05);
     border-collapse: separate;
     border-spacing: 0;
+    margin: 1em auto;
 }
 
 .section-table td {

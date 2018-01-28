@@ -63,6 +63,36 @@
                 <p>For newer projects and finished projects, source code is usually available. Older or unfinished projects may have source code that is not uploaded to a website for easy access, but they are typically still under version control. If the project is listed on the website, I have access to its full source code. Source requests can be made to me through email.</p>
                 <p>Source code for school projects is withheld to prevent breaches of the University of Michigan <a href="https://bulletin.engin.umich.edu/rules/">Engineering Honor Code</a>. Requests for school project source code should only be made by non-students.</p>
             </div>
+            <div class="section-content">
+                <a name="project-cards"></a>
+                <h2>How to Use Project Cards</h2>
+                <p>Project cards (like the one below) are used to convey information about projects that are finished or in progress. There source code availability can be seen at a glance using the legend below. Each project has links in the bottom left of the card and a set of tags in the bottom right. The project category is in the top right next to the active project date.</p>
+                <div class="js-project-card">
+                </div>
+                <script>
+                    loadProjectByTitle($('.js-project-card'), "Personal Website");
+                </script>
+                <br />
+                <h3>Legend</h3>
+                <table class="section-table">
+                    <tr>
+                        <td><span style="display:block; width:16px; height:16px; background-color:#5cb85c;"></span></td>
+                        <td>Source code is available online</td>
+                    </tr>
+                    <tr>
+                        <td><span style="display:block; width:16px; height:16px; background-color:#d8d8d9;"></span></td>
+                        <td>Source code is not available online, but available via a <a href="#source-request">Source Request</a></td>
+                    </tr>
+                    <tr>
+                        <td><span style="display:block; width:16px; height:16px; background-color:#1b809e;"></span></td>
+                        <td>Source code is not available online, nor to students due to the <a href="https://bulletin.engin.umich.edu/rules/">Honor Code</a></td>
+                    </tr>
+                    <tr>
+                        <td><span style="display:block; width:16px; height:16px; background-color:#aa6708;"></span></td>
+                        <td>Source code is not available</td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <div class="footer">

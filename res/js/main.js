@@ -106,6 +106,16 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     }
 }
 
+function loadProjectByTitle(container, title) {
+    for (var i = 0; i < PROJECTS.length; ++i) {
+        if (PROJECTS[i].title === title) {
+            var $projectCard = $(getCardHtml(PROJECTS[i]));
+            $projectCard.appendTo(container);
+            return;
+        }
+    }
+}
+
 function addSeeMore(container, text, link) {
     if (link === undefined) {
         link = "";
@@ -118,6 +128,26 @@ function addSeeMore(container, text, link) {
 
 function getTotalProjects() {
     return PROJECTS.length;
+}
+
+function getProjectsWithCategory(category) {
+    var projects = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
+        if (PROJECTS[i].category === category) {
+            ++projects;
+        }
+    }
+    return projects;
+}
+
+function getProjectsWithTag(tag) {
+    var projects = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
+        if (PROJECTS[i].tags.includes(tag)) {
+            ++projects;
+        }
+    }
+    return projects;
 }
 
 function getCardHtml(project) {
