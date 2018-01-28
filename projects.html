@@ -23,9 +23,10 @@
         </div>
 
         <div class="section-container">
-            <div class="section-content">
+            <div class="section-content js-projects-title-container">
                 <h1 class="js-projects-title">Projects</h1>
                 <i class="js-projects-found">0 projects found.</i>
+                <br /><br />
             </div>
         </div>
         <div class="project-container js-projects"></div>
@@ -50,6 +51,7 @@
                 } else {
                     $('.js-projects-title').html("All Projects");
                     $('.js-projects-found').html(getTotalProjects() + " projects found.");
+                    addLanguageBreakdown($('.js-projects-title-container'));
                     loadAllProjects($('.js-projects'), 0, false);
                 }
             });

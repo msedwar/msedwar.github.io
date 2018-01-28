@@ -150,6 +150,20 @@ function getProjectsWithTag(tag) {
     return projects;
 }
 
+function getLanguageBreakdown() {
+    var languages = {};
+    var total = 0;
+    for (var i = 0; i < PROJECTS.length; ++i) {
+        var lang = PROJECTS[i].language;
+        if (lang !== undefined) {
+            languages[lang] = 1 + (languages[lang] || 0);
+            ++total;
+        }
+    }
+    languages._total = total;
+    return languages;
+}
+
 function getCardHtml(project) {
     var availability = "";
     switch (project.source) {

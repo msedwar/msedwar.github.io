@@ -296,3 +296,42 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 .project-src-school .project-note {
     background-color: #1b809e;
 }
+
+/* Language Breakdown */
+
+.breakdown {
+    display: block;
+    border-radius: 0.25rem;
+    border: 1px solid #d5d5d7;
+    overflow: hidden;
+    margin: 0.5em 0;
+}
+
+.breakdown-label-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.breakdown div.progress {
+    border-radius: 0;
+    margin: 0;
+    width: calc(100% + 2px);
+}
+
+.breakdown-label-pill {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin: 0 0.5em 0.1em 0.5em;
+}
+
+.breakdown-label-percent {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #717a82;
+    margin: 0 0.5em;
+}
