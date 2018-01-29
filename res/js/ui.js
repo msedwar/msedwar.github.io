@@ -80,10 +80,8 @@ $(function () {
     $(window).on("scroll", function () {
         if ($(window).scrollTop() >= navbarPos) {
             $('.js-navbar').addClass("sticky");
-            $('body').addClass("sticky")
         } else {
             $('.js-navbar').removeClass("sticky");
-            $('body').removeClass("sticky");
         }
     });
     $('.js-navbar-projects').html(getTotalProjects());

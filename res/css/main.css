@@ -6,11 +6,6 @@ body {
     background-color: #3a3a3c;
 }
 
-body.sticky {
-    transition: all 0.35s ease;
-    padding-top: 50px;
-}
-
 .halftone {
     height: 200px;
     background: #d8d8d9 url("../img/halftone.png") fixed no-repeat top center;
@@ -85,6 +80,7 @@ blockquote {
 }
 
 div.nav-bar-wrapper.sticky div.nav-bar {
+    transition: all 0.25s ease;
     width: 80%;
     margin: 0 auto;
 }
