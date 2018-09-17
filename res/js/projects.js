@@ -9,6 +9,28 @@ const PROJECTS = [
     // Newer -----------------------------------------------------------------------------------------------------------
 
     {
+        title: "M20 Assembly",
+        date: "2018 - Present",
+        description: "A custom instruction set architecture, assembler, linker, and simulator. The purpose of the project was to gain further insight into operating systems and low-level processor principles. The fictional processor and architecture is based on a 32-bit ARM design.",
+        source: AVAILABLE,
+        category: "Personal",
+        language: "C++",
+        buttons: [
+            {
+                name: "Github",
+                link: "https://github.com/msedwar/m20-assembly"
+            }
+        ],
+        tags: [
+            "Compiler",
+            "Assembler",
+            "Linker",
+            "Simulation",
+            "C++",
+            "Instruction Set"
+        ]
+    },
+    {
         title: "MLint",
         date: "2018 - Present",
         description: "MLint is a code linter for C++. It is written in Python and based on Google's <a href=\"https://github.com/google/styleguide/tree/gh-pages/cpplint\" target=\"_blank\">cpplint</a> project.",
