@@ -18,6 +18,7 @@ const LANG_COLOR = {
     "Javascript": "#f1e05a",
     "C++": "#3572A5",
     "C": "#f34b7d",
+    "C#": "#178600",
     "Python": "#654fa5",
     "Shell": "#89e051",
     "Other": "#555555"

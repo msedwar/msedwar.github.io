@@ -9,6 +9,28 @@ const PROJECTS = [
     // Newer -----------------------------------------------------------------------------------------------------------
 
     {
+        title: "TaskPlanner",
+        date: "2018 - Present",
+        description: "A web application and entrepreneurial venture. It is available as a free way to organize your to-do's or class assignments; built by students, for students. The website's stack includes an API based on Express, running on Node.JS and a frontend based on React and Nginx. Source withheld as proprietary.",
+        source: WITHHELD,
+        category: "Personal",
+        language: "Javascript",
+        buttons: [
+            {
+                name: "Website",
+                link: "https://taskplanner.io"
+            }
+        ],
+        tags: [
+            "Web",
+            "Javascript",
+            "React",
+            "Express",
+            "Node",
+            "Nginx"
+        ]
+    },
+    {
         title: "M20 Assembly",
         date: "2018 - Present",
         description: "A custom instruction set architecture, assembler, linker, and simulator. The purpose of the project was to gain further insight into operating systems and low-level processor principles. The fictional processor and architecture is based on a 32-bit ARM design.",
@@ -121,6 +143,347 @@ const PROJECTS = [
 
     // School ----------------------------------------------------------------------------------------------------------
 
+    {
+        title: "Dungeon of the Necromancer",
+        date: "Winter 2019",
+        description: "A custom, rapidly-prototyped video game. You are a brave knight sent to slay a demon that has been terrorizing a town. Explore and fight your way through a procedurally-generated dungeon.<br /><br />This was the second project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "Play Web Version",
+                link: "http://www-personal.umich.edu/~msedwar/eecs494/Dungeon"
+            },
+            {
+                name: "Desktop Downloads",
+                link: "http://www-personal.umich.edu/~msedwar/eecs494/builds/dungeon/"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Procedural Generation",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
+        title: "Legend of Zelda",
+        date: "Winter 2019",
+        description: "A recreation of the first dungeon in the original Legend of Zelda game for the Nintendo Entertainment System (NES). This project also required implementation of a custom mechanic for the clone.<br /><br />This was the first project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "Play Web Version",
+                link: "http://www-personal.umich.edu/~msedwar/LoZ"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Legend of Zelda",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
+        title: "Super Flappy Bird",
+        date: "Winter 2019",
+        description: "EECS 494 is the only game development course at the University of Michigan, and thus demands a quick ramp-up of Unity skills and experience. This project required:<br />" +
+        "<ul><li>Establishing basic familiarity and experience with the Unity game engine.</li>" +
+        "<li>Introducing the component design pattern</li>" +
+        "<li>Introducing new mechanics to the tutorial game</li></ul>" +
+        "<br /><br />This was the second tutorial project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "Play Web Version",
+                link: "http://www-personal.umich.edu/~msedwar/eecs494/SuperFlappyBird"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Flappy Bird",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
+        title: "Roll-A-Ball",
+        date: "Winter 2019",
+        description: "EECS 494 is the only game development course at the University of Michigan, and thus demands a quick ramp-up of Unity skills and experience. This project required:<br />" +
+        "<ul><li>Establishing basic familiarity and experience with the Unity game engine.</li>" +
+        "<li>Introducing the component design pattern</li>" +
+        "<li>Introducing new mechanics to the tutorial game</li></ul>" +
+        "<br /><br />This was the first tutorial project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "Play Web Version",
+                link: "http://www-personal.umich.edu/~msedwar/eecs494/RollABall"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
+        title: "Roll-A-Ball",
+        date: "Winter 2019",
+        description: "EECS 494 is the only game development course at the University of Michigan, and thus demands a quick ramp-up of Unity skills and experience. This project required:<br />" +
+        "<ul><li>Establishing basic familiarity and experience with the Unity game engine.</li>" +
+        "<li>Introducing the component design pattern</li>" +
+        "<li>Introducing new mechanics to the tutorial game</li></ul>" +
+        "<br /><br />This was the tutorial project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "Play Web Version",
+                link: "http://www-personal.umich.edu/~msedwar/eecs494/RollABall"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
+        title: "Brew-Hob",
+        date: "Fall 2018",
+        description: "Designed and implemented an automated vending machine that could detect, retreive, and serve the coldest drink can available. I was in a team of 4 for this class term project. The hardware was controlled via a SmartFusion microcontroller, and included hardware such as HXD8357D Touchscreen, analog temperature sensors, TCS34725 RGBA color sensor, stepper motors, and an N64 video game console controller. Many drivers were written by hand based on hardware specifications, a graphics library was ported by hand in order to execute on the processor we used, and a small, lightweight RTOS was written to handle the appliance's main application and its external devices. This project used a mixture of C, ARM Assembly, and Verilog.<br /><br />This was the term project in EECS 373: Introduction to Embedded Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 373",
+        language: "C",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 373",
+            "Embedded Systems",
+            "C",
+            "ARM Assembly",
+            "Verilog"
+        ]
+    },
+    {
+        title: "Network File Server",
+        date: "Winter 2018",
+        description: "Designed and implemented a multi-threaded, secure network file server. Clients that use the file server can interact with it via network messages. This project required understanding of hierarchical file systems, socket programming, client-server systems, remote code execution, and security protocols.<br /><br />This was the fourth project in EECS 482: Introduction to Operating Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 482",
+        language: "C++",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 482",
+            "Operating Systems",
+            "Networking",
+            "Server",
+            "Multithreaded",
+            "Security",
+            "C++"
+        ]
+    },
+    {
+        title: "Memory Pager",
+        date: "Winter 2018",
+        description: "Designed and implemented a memory pager, which is the part of the kernel that manages application processes' virtual address spaces. Pages are stored in physical memory, in a swap file, or in a regular file. The pager manages these resources on behalf of all the applications it manages.<br /><br />This was the third project in EECS 482: Introduction to Operating Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 482",
+        language: "C++",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 482",
+            "Operating Systems",
+            "Paging",
+            "Virtual Memory",
+            "Multithreaded",
+            "C++"
+        ]
+    },
+    {
+        title: "Threading Library",
+        date: "Winter 2018",
+        description: "A threading library that balances workloads across multiple CPUs. Included implementation of basic multithreaded interfaces like threads, mutexes, and condition variables.<br /><br />This was the second project in EECS 482: Introduction to Operating Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 482",
+        language: "C++",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 482",
+            "Operating Systems",
+            "Threading",
+            "Library",
+            "Multithreaded",
+            "C++"
+        ]
+    },
+    {
+        title: "Disk Scheduler",
+        date: "Winter 2018",
+        description: "A concurrent, multithreaded program that issues and services disk requests.<br /><br />This was the first project in EECS 482: Introduction to Operating Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 482",
+        language: "C++",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 482",
+            "Operating Systems",
+            "Disk Scheduling",
+            "Multithreaded",
+            "C++"
+        ]
+    },
+    {
+        title: "Sensor and Servo Interfacing",
+        date: "Winter 2018",
+        description: "Designed, developed, and implemented a sequential digital circuit whose purpose was to interface with actual hardware devices. Wrote Verilog hardware descriptions for interfaces into an Ultrasonic sensor and servo. Finally, these interfaces were combined and run on hardware to create a device which would focus on the nearest object.<br /><br />This was the seventh lab in EECS 270: Introduction to Logic Design. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 270",
+        language: "Verilog",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 270",
+            "Logic Design",
+            "Servo",
+            "Verilog"
+        ]
+    },
+    {
+        title: "Traffic Light Controller",
+        date: "Winter 2018",
+        description: "Designed and implemented a state machine in hardware that controls a set of traffic lights.<br /><br />This was the sixth lab in EECS 270: Introduction to Logic Design. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 270",
+        language: "Verilog",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 270",
+            "Logic Design",
+            "Controller",
+            "Verilog"
+        ]
+    },
     {
         title: "Binary Exploitation",
         date: "Fall 2017",
