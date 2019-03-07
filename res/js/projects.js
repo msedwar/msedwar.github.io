@@ -98,29 +98,6 @@ const PROJECTS = [
         ]
     },
     {
-        title: "Disk Scheduler",
-        date: "Winter 2018",
-        description: "A somewhat simple concurrent program that receives, schedules, and services disk requests using a provided library.<br /><br />This was the first project in EECS 482: Introduction to Operating Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
-        source: SCHOOL,
-        category: "EECS 482",
-        language: "C++",
-        buttons: [
-            {
-                name: "Request Source",
-                link: "about.html#source-request"
-            },
-            {
-                name: "Honor Code",
-                link: "https://bulletin.engin.umich.edu/rules/"
-            }
-        ],
-        tags: [
-            "EECS 482",
-            "Multithreading",
-            "C++"
-        ]
-    },
-    {
         title: "Git Workflow Scripts",
         date: "Winter 2018",
         description: "A collection of Bash scripts, Makefiles, and git-hooks to improve my own workflow (with a focus on C++).",
@@ -249,39 +226,6 @@ const PROJECTS = [
         "<li>Introducing the component design pattern</li>" +
         "<li>Introducing new mechanics to the tutorial game</li></ul>" +
         "<br /><br />This was the first tutorial project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
-        source: SCHOOL,
-        category: "EECS 494",
-        language: "C#",
-        buttons: [
-            {
-                name: "Play Web Version",
-                link: "http://www-personal.umich.edu/~msedwar/eecs494/RollABall"
-            },
-            {
-                name: "Request Source",
-                link: "about.html#source-request"
-            },
-            {
-                name: "Honor Code",
-                link: "https://bulletin.engin.umich.edu/rules/"
-            }
-        ],
-        tags: [
-            "EECS 494",
-            "Video Game",
-            "Unity",
-            "C-Sharp",
-            "C#"
-        ]
-    },
-    {
-        title: "Roll-A-Ball",
-        date: "Winter 2019",
-        description: "EECS 494 is the only game development course at the University of Michigan, and thus demands a quick ramp-up of Unity skills and experience. This project required:<br />" +
-        "<ul><li>Establishing basic familiarity and experience with the Unity game engine.</li>" +
-        "<li>Introducing the component design pattern</li>" +
-        "<li>Introducing new mechanics to the tutorial game</li></ul>" +
-        "<br /><br />This was the tutorial project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
         source: SCHOOL,
         category: "EECS 494",
         language: "C#",
@@ -442,7 +386,7 @@ const PROJECTS = [
         description: "Designed, developed, and implemented a sequential digital circuit whose purpose was to interface with actual hardware devices. Wrote Verilog hardware descriptions for interfaces into an Ultrasonic sensor and servo. Finally, these interfaces were combined and run on hardware to create a device which would focus on the nearest object.<br /><br />This was the seventh lab in EECS 270: Introduction to Logic Design. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
         source: SCHOOL,
         category: "EECS 270",
-        language: "Verilog",
+        language: "Other",
         buttons: [
             {
                 name: "Request Source",
@@ -466,7 +410,7 @@ const PROJECTS = [
         description: "Designed and implemented a state machine in hardware that controls a set of traffic lights.<br /><br />This was the sixth lab in EECS 270: Introduction to Logic Design. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
         source: SCHOOL,
         category: "EECS 270",
-        language: "Verilog",
+        language: "Other",
         buttons: [
             {
                 name: "Request Source",
