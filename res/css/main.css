@@ -312,9 +312,15 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 .breakdown-label-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding: 0 2em;
     margin: 0.5em 0 0.5em 0;
+}
+
+.breakdown-label {
+    flex: 0 auto;
 }
 
 .breakdown div.progress {
