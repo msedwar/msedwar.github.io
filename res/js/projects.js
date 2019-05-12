@@ -121,6 +121,36 @@ const PROJECTS = [
     // School ----------------------------------------------------------------------------------------------------------
 
     {
+        title: "Junkyard Brawl",
+        date: "Winter 2019",
+        description: "Junkyard Brawl is a fighting game where players must out-position their opponents in order to knock them around a dangerous battlefield. Each character has a different method of traversing the battlefield, rewarding players for becoming skilled and jumping, swinging, or dashing around the play area. Playable on Mac or PC with XBox controllers (local multiplayer).<br /><br />This was the final project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 494",
+        language: "C#",
+        buttons: [
+            {
+                name: "IndieDB",
+                link: "https://www.indiedb.com/members/cowardlywraith/downloads"
+            },
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 494",
+            "Video Game",
+            "Multiplayer",
+            "Unity",
+            "C-Sharp",
+            "C#"
+        ]
+    },
+    {
         title: "Dungeon of the Necromancer",
         date: "Winter 2019",
         description: "A custom, rapidly-prototyped video game. You are a brave knight sent to slay a demon that has been terrorizing a town. Explore and fight your way through a procedurally-generated dungeon.<br /><br />This was the second project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
