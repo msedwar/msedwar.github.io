@@ -1,19 +1,34 @@
-const projectCardTmpl =
-    '<div class="project-card {{availability}}">\n' +
-    '{{note}}' +
-    '    <div class="project-title">{{title}}</div>\n' +
-    '    <div class="project-date">{{date}}</div>\n' +
-    '    <p class="project-description">{{description}}</p>\n' +
-    '    <div class="project-tags">Tags:&nbsp;{{tags}}</div>\n' +
-    '    <div class="project-btn-group btn-group">\n' +
-    '        {{buttons}}\n' +
+const projectCardContainerTmpl =
+    '<div class="container project-container">\n' +
+    '    <div class="row project-container-row">\n' +
     '    </div>\n' +
-    '</div>\n';
+    '</div>';
+const projectCardTmpl =
+    '<div class="col-md project-card-container"><div class="project-card {{availability}} animated zoomInUp">\n' +
+    '{{note}}' +
+    '    <div class="project-header">\n' +
+    '        <div class="project-title">{{title}}</div>\n' +
+    '        <div class="project-date">{{date}}</div>\n' +
+    '    </div>\n' +
+    '    <div class="project-description"><div>{{description}}</div></div>\n' +
+    '    <div class="project-footer">\n' +
+    '       <div class="project-btn-group btn-group">\n' +
+    '           {{buttons}}\n' +
+    '       </div>\n' +
+    '       <div class="project-tags">Tags:&nbsp;{{tags}}</div>\n' +
+    '    </div>\n' +
+    '</div></div>\n';
 
-const projectCardNoteTmpl = '<div class="project-note-padding"></div><div class="project-note">~ {{note}} ~</div>';
+const projectCardNoteTmpl = '<div class="project-note">~ {{note}} ~</div>';
 const projectCardBtnTmpl = '<a href="{{link}}" target="_blank" class="btn btn-sm project-btn">{{name}}</a>\n';
 const projectCardTagTmpl = '<a href="{{link}}" target="_blank" class="project-tag">{{tag}}</a>';
-const projectSeeMoreTmpl = '<div class="project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn btn-sm project-btn">{{text}}</a></div>';
+const projectSeeMoreTmpl = '<div class="row project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn project-see-more-btn">{{text}}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a></div>';
+
+function buildProjectContainer(container) {
+    var $projectContainer = $(projectCardContainerTmpl);
+    $projectContainer.appendTo(container);
+    return $projectContainer.children(".project-container-row");
+}
 
 function loadAllProjects(container, limit, seemore) {
     if (limit === undefined) {
@@ -36,9 +51,7 @@ function loadProjectsByTag(container, tag, limit, seemore) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].tags.includes(tag)) {
             var $projectCard = $(getCardHtml(PROJECTS[i]));
-            $projectCard.hide();
             $projectCard.appendTo(container);
-            $projectCard.slideDown(400);
             ++loaded;
 
             if (limit > 0 && loaded >= limit) {
@@ -63,9 +76,7 @@ function loadProjectsByCategory(container, category, limit, seemore) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category === category) {
             var $projectCard = $(getCardHtml(PROJECTS[i]));
-            $projectCard.hide();
             $projectCard.appendTo(container);
-            $projectCard.slideDown(400);
             ++loaded;
 
             if (limit > 0 && loaded >= limit) {
@@ -90,9 +101,41 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category !== category) {
             var $projectCard = $(getCardHtml(PROJECTS[i]));
-            $projectCard.hide();
             $projectCard.appendTo(container);
-            $projectCard.slideDown(400);
+            ++loaded;
+
+            if (limit > 0 && loaded >= limit) {
+                break;
+            }
+        }
+    }
+
+    if (seemore) {
+        addSeeMore(container, "See more projects");
+    }
+}
+
+function loadProjectsExceptCategoryRandom(container, category, limit, seemore) {
+    if (limit === undefined) {
+        limit = 10;
+    }
+    if (seemore === undefined) {
+        seemore = true;
+    }
+    var loaded = 0;
+    var shuffledProjects = $.extend(true, [], PROJECTS);
+    // Shuffle projects
+    for (var i = 0; i < shuffledProjects.length; ++i) {
+        var randomIndex = Math.floor(Math.random() * shuffledProjects.length);
+        var temp = shuffledProjects[i];
+        shuffledProjects[i] = shuffledProjects[randomIndex];
+        shuffledProjects[randomIndex] = temp;
+    }
+
+    for (var i = 0; i < shuffledProjects.length; ++i) {
+        if (shuffledProjects[i].category !== category) {
+            var $projectCard = $(getCardHtml(shuffledProjects[i]));
+            $projectCard.appendTo(container);
             ++loaded;
 
             if (limit > 0 && loaded >= limit) {
@@ -123,7 +166,7 @@ function addSeeMore(container, text, link) {
     $(projectSeeMoreTmpl
         .replace("{{link}}", link)
         .replace("{{text}}", text)
-    ).appendTo(container);
+    ).appendTo($(container).parent());
 }
 
 function getTotalProjects() {

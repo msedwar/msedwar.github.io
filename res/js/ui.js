@@ -1,11 +1,11 @@
 const navTmpl = '<div class="nav-bar-wrapper js-navbar">\n' +
     '                <div class="nav-bar">\n' +
-    '                    <a href="index.html">Home</a>\n' +
-    '                    <a href="projects.html">Projects <span class="nav-bar-projects-pill js-navbar-projects">0</span></a>\n' +
-    '                    <a href="about.html">About</a>\n' +
-    '                    <a href="awards.html">Awards</a>\n' +
+    '                    <a href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>\n' +
+    '                    <a href="projects.html"><i class="fa fa-code-fork"></i>&nbsp;&nbsp;Projects <span class="nav-bar-projects-pill js-navbar-projects">0</span></a>\n' +
+    '                    <a href="about.html"><i class="fa fa-user-circle-o"></i>&nbsp;&nbsp;About</a>\n' +
+    '                    <a href="awards.html"><i class="fa fa-certificate"></i>&nbsp;&nbsp;Awards</a>\n' +
     // '                    <a href="index.html">More...</a>\n' +
-    '                    <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank" style="float:right;">LinkedIn</a>\n' +
+    '                    <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank" style="float:right;"><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;LinkedIn</a>\n' +
     '                </div>\n' +
     '            </div>';
 

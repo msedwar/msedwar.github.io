@@ -3,7 +3,7 @@
 body {
     font-family: "Trebuchet MS", Verdana, Arial;
     min-width: 600px;
-    background-color: #3a3a3c;
+    background-color: #323034;
 }
 
 .halftone {
@@ -53,10 +53,10 @@ blockquote {
     right: 0;
     z-index: 1000;
     min-width: 575px;
-    max-width: 875px;
+    max-width: 950px;
 }
 
-@media (max-width: 875px) {
+@media (max-width: 950px) {
     .nav-bar-wrapper {
         width: 100%;
     }
@@ -117,8 +117,8 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 /* Footer */
 
 .footer {
-    background-color: #3a3a3c;
-    height: 200px;
+    background-color: #323034;
+    height: 250px;
     margin: 0;
     padding: 1em 0;
 }
@@ -145,7 +145,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     width: 80%;
     margin: 0 auto;
     min-width: 575px;
-    max-width: 875px;
+    max-width: 950px;
 }
 
 .section-content h2 {
@@ -179,28 +179,55 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 /* Project Containers */
 
-.project-container {
-    background-color: #f8f8fa;
-    border-top: 1px solid #d5d5d7;
-    border-bottom: 1px solid #d5d5d7;
+.project-container-section {
+    background-color: #424044;
+    border-top: 1px solid #7b797d;
+    border-bottom: 1px solid #2a282c;
     margin: 0;
     padding: 2em 0;
     width: 100%;
 }
 
+.project-container {
+    width: calc(80%);
+    padding: 0 0.5em;
+    margin: 0 auto;
+    min-width: 575px;
+    max-width: 950px;
+}
+
+.project-container-row {
+    align-items: stretch;
+}
+
+.project-card-container {
+    display: flex;
+    padding: 0 0.35em 0.75em 0.35em;
+}
+
 .project-card {
+    display: flex;
+    flex-direction: column;
     position: relative;
     border-radius: 0.25em;
     border: 1px solid #d8d8d9;
     border-left-width: 5px ;
     box-shadow: 0 0.25em 0.75em 0 rgba(0, 0, 0, 0.05);
-    width: 80%;
-    margin: 0 auto 0.75em auto;
+    margin: 0 0 0.75em 0;
     padding: 0.5em;
     font-size: 16px;
-    min-width: 575px;
-    max-width: 875px;
     background-color: #ffffff;
+    height: 100%;
+    min-width: 350px;
+}
+
+.project-header {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .project-title {
@@ -215,7 +242,9 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 }
 
 .project-description {
-    display: block;
+    display: flex;
+    flex: 1 1 auto;
+    height: available;
     border-top: 1px solid #d8d8d9;
     margin: 0.25em 0 0.75em 0;
     padding: 0.375em 0 0.75em 0;
@@ -228,11 +257,11 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     font-weight: bold;
     color: #ffffff;
     background-color: #5cb85c;
-    position: absolute;
-    top: -1px;
-    left: -5px;
+    position: relative;
     padding: 0.2em 0 0.15em 0;
-    width: calc(100% + 6px);
+    width: calc(100% + 1em + 6px);
+    margin-left: calc(-0.5em - 5px);
+    margin-top: calc(-0.5em - 1px);
     border-radius: 0.25em 0.25em 0 0;
 }
 
@@ -240,10 +269,21 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     height: 1.5em;
 }
 
+.project-footer {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+}
+
 .project-tags {
-    display: inline-block;
-    float: right;
+    display: block;
+    width: 100%;
     font-size: 14px;
+    margin: 0.75em 0 0.25em 0;
+    padding: 0.375em 0 0 0;
+    border-top: 1px solid #d8d8d9;
 }
 
 .project-btn {
@@ -266,6 +306,17 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 .project-see-more {
     display: inline-block;
     margin: 0 auto;
+}
+
+.project-see-more-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
+}
+
+.project-see-more-btn:hover {
+    color: #424044;
+    background-color: #ffffff;
 }
 
 .project-src-available {

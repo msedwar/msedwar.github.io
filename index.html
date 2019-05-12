@@ -5,14 +5,16 @@
         <title>Matthew Edwards - Portfolio</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="res/css/main.css" rel="stylesheet">
+        <link href="res/css/animate.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <script src="res/js/projects.js"></script>
-        <script src="res/js/main.js"></script>
-        <script src="res/js/ui.js"></script>
+        <script type="text/javascript" src="res/js/projects.js"></script>
+        <script type="text/javascript" src="res/js/main.js"></script>
+        <script type="text/javascript" src="res/js/ui.js"></script>
     </head>
     <body>
 
@@ -25,7 +27,7 @@
         <div class="section-container">
             <div class="section-content">
                 <h1>Portfolio</h1>
-                <p>Starting in 2018, I will have about 9 years of programming experience. My preferred programming languages include Java and C++, but I have solid experience in everything from ARM Assembly to PHP to Python to Swift.</p>
+                <p>Since 2019, I will have about 10 years of programming experience. My preferred programming languages include Java, Python, and C++, but I have solid experience in everything from ARM Assembly to PHP to Scala to Swift.</p>
                 <p>My typical projects include those started for my own learning purposes or tools I have created to help myself in my own workflow. Game programming is also a personal hobby and I have been known to participate in <a href="https://ldjam.com/">Ludum Dare</a>. Here are my projects broken down by programming language:</p>
                 <br />
                 <div class="js-language-breakdown"></div>
@@ -36,16 +38,32 @@
                 <p>A collection of various projects can be found below: <a href="about.html#project-cards" style="float:right;">(What do the card colors mean?)</a></p>
             </div>
         </div>
-        <div class="project-container js-personal-projects"></div>
+        <div class="album project-container-section js-personal-projects"></div>
 
         <div class="section-container">
             <div class="section-content">
-                <h2>School Projects</h2>
-                <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine:</p>
+                <h2>Coursework and Academic Projects</h2>
+                <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine. Projects can also be viewed by course:</p>
+                <ul>
+                    <li><a href="projects.html?tag=EECS 494">EECS 494 - Computer Game Design and Development</a></li>
+                    <li><a href="projects.html?tag=EECS 482">EECS 482 - Introduction to Operating Systems</a></li>
+                    <li><a href="projects.html?tag=EECS 388">EECS 388 - Introduction to Computer Security</a></li>
+                    <li><a href="projects.html?tag=EECS 373">EECS 373 - Introduction to Embedded System Design</a></li>
+                    <li><a href="projects.html?tag=EECS 370">EECS 370 - Introduction to Computer Organization</a></li>
+                    <li><a href="projects.html?tag=EECS 281">EECS 281 - Introduction to Data Structures and Algorithms</a></li>
+                    <li><a href="projects.html?tag=EECS 280">EECS 280 - Introduction to Programming</a></li>
+                    <li><a href="projects.html?tag=EECS 270">EECS 270 - Introduction to Logic Design</a></li>
+                </ul>
+                <br />
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="shuffleProjects()">
+                        Shuffle Projects&nbsp;&nbsp;<i class="fa fa-refresh"></i>
+                    </button>
+                </div>
                 <br />
             </div>
         </div>
-        <div class="project-container js-school-projects"></div>
+        <div class="album project-container-section js-school-projects"></div>
 
         <div class="footer">
             <div class="footer-container">
@@ -54,8 +72,15 @@
         </div>
 
         <script>
-            $(loadProjectsByCategory($('.js-personal-projects'), 'Personal', 5));
-            $(loadProjectsExceptCategory($('.js-school-projects'), 'Personal', 5));
+            $(function () {
+                loadProjectsByCategory(buildProjectContainer($('.js-personal-projects')), 'Personal', 4);
+                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
+            });
+
+            function shuffleProjects() {
+                $('.js-school-projects').empty();
+                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
+            }
         </script>
     </body>
 </html>

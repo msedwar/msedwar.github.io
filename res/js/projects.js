@@ -163,7 +163,7 @@ const PROJECTS = [
                 link: "http://www-personal.umich.edu/~msedwar/eecs494/Dungeon"
             },
             {
-                name: "Desktop Downloads",
+                name: "Downloads",
                 link: "http://www-personal.umich.edu/~msedwar/eecs494/builds/dungeon/"
             },
             {
