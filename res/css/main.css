@@ -8,13 +8,24 @@ body {
 
 .halftone {
     height: 200px;
-    background: #d8d8d9 url("../img/halftone.png") fixed no-repeat top center;
+    background: #d8d8d9 url("../img/halftone-2.png") fixed no-repeat top center;
+    position: relative;
+}
+
+.halftone-divider {
+    height: 24px;
+    background: #d8d8d9 url("../img/halftone-2.png") no-repeat top center;
     position: relative;
 }
 
 @media (min-width: 1500px) {
     .halftone {
-        background: #d8d8d9 url("../img/halftone.png") fixed top center;
+        background: #d8d8d9 url("../img/halftone-2.png") fixed top center;
+        background-size: 100%;
+    }
+
+    .halftone-divider {
+        background: #d8d8d9 url("../img/halftone-2.png") top center;
         background-size: 100%;
     }
 }
@@ -24,6 +35,11 @@ blockquote {
     margin: 0 auto;
     border-left: 5px solid rgba(0, 0, 0, 0.15);
     padding: 1em 1em 1em 2em;
+}
+
+h1 {
+    padding-top: 50px;
+    margin-top: -50px;
 }
 
 /* Header */
@@ -39,6 +55,7 @@ blockquote {
     width: 14em;
     position: absolute;
     bottom: 80px;
+    z-index: 1;
 }
 
 .nav-bar-wrapper {
@@ -67,6 +84,7 @@ blockquote {
     width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.8);
     max-width: 100%;
 }
@@ -101,6 +119,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 }
 
 .nav-bar-projects-pill {
+    text-align: center;
     display: inline-block;
     padding: 1px 7px;
     font-size: 12px;
@@ -114,23 +133,82 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     margin: 0 0 0 0.25em;
 }
 
+/* Table of Contents */
+
+.toc {
+    display: block;
+    position: relative;
+    left: -20px;
+    z-index: 100;
+    padding: 0 0 2em 0;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 575px;
+    max-width: 950px;
+}
+
+.toc a.nav-link:hover {
+    color: #323034 !important;
+    border-left: 1px solid #323034 !important;
+}
+
+.toc-placeholder {
+    display: none;
+    margin: 0;
+}
+
+@media (min-width: 950px) {
+    .toc.sticky {
+        transition: all 0.25s ease;
+        position: fixed;
+        top: 82px;
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        padding: 0.5em 2em;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .toc.sticky a.nav-link {
+        color: #ffffff;
+    }
+
+    .toc.sticky a.nav-link:hover {
+        color: #ffffff !important;
+        border-left: 1px solid #ffffff !important;
+    }
+
+    .toc.sticky a.nav-link.active {
+        border-left: 2px solid #ffffff;
+    }
+
+    .toc-placeholder.sticky {
+        display: block;
+        width: 100%;
+    }
+}
+
 /* Footer */
 
 .footer {
     background-color: #323034;
-    height: 250px;
+    height: 400px;
     margin: 0;
     padding: 2em 0;
 }
 
 .footer-container {
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 2em 0;
     width: 80%;
     text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.footer-copyright {
     font-size: 18px;
     font-weight: bold;
-    color: #ffffff;
 }
 
 /* Section Containers */
@@ -149,8 +227,8 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 }
 
 .section-content h2 {
-    margin: 1.5em 0 0.2em 0;
-    padding: 0 0 0.25em 0;
+    margin: -50px 0 0.2em 0;
+    padding: calc(1.5em + 50px) 0 0.25em 0;
     border-bottom: 1px solid #d8d8d9;
 }
 
@@ -186,6 +264,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     margin: 0;
     padding: 2em 0;
     width: 100%;
+    min-height: 400px;
 }
 
 .project-container {
@@ -357,12 +436,19 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 }
 
 .project-language-pill {
+    display: inline-block;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
-    padding: 0.2em 1em;
     border-radius: 1em;
+    padding: 1px 10px;
+    background-color: #ffffff;
+    white-space: nowrap;
+    min-width: 30px;
+    vertical-align: middle;
+    margin: 0 0 0 0.25em;
+    text-align: center;
 }
 
 .project-language-pill:hover {
@@ -422,4 +508,145 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     font-weight: bold;
     color: #717a82;
     margin: 0 0.5em;
+}
+
+/* Carousel */
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0;
+    height: 24em;
+    border-bottom: 1px solid #d8d8d9;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 2em 2em 10em 2em;
+}
+
+.skill-content h3 {
+    font-size: 2.5em;
+}
+
+.carousel-container {
+    background-color: #ffffff;
+    width: 28em;
+}
+
+.carousel-indicators {
+    filter: invert(100%);
+}
+
+.logo-container {
+    width: 100%;
+    height: 16em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-container i {
+    display: flex;
+    font-size: 6em;
+}
+
+/* Backgrounds */
+
+.background-mountains {
+    position: relative;
+    background: #323034 url("../img/mountains-bg.png") no-repeat fixed top center !important;
+}
+
+.background-stars {
+    position: relative;
+    background: #323034 url("../img/stars-bg.png") no-repeat fixed top center !important;
+}
+
+.background-galaxy {
+    position: relative;
+    background: #323034 url("../img/galaxy-bg.png") no-repeat fixed top center !important;
+}
+
+.background-overlay-grey:after {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.background-overlay-dim:after {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.background-overlay:after {
+    position: absolute;
+    content: "";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* Landing Page */
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 100vh;
+    height: 1000px;
+    min-height: 350px !important;
+    padding: 0;
+    margin: 0;
+}
+
+.landing-jumbo {
+    position: relative;
+    top: -10%;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.landing-jumbo-title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #ffffff;
+}
+
+.landing-jumbo-subtitle {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.landing-see-more {
+    position: relative;
+    top: 28vh;
+    text-align: center;
+    font-style: italic;
+    animation-delay: 2s;
+}
+
+.landing-profile-img {
+    width: 16em;
+    height: 16em;
+    background: url("../img/medwards2.jpg") no-repeat center center;
+    background-size: 100%;
+    background-clip: content-box;
+    border-radius: 32em;
+    border: 0.5em solid #424044;
+    margin: 2em auto;
+    box-shadow: 1px 10px 10px -8px #323034;
 }

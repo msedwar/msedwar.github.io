@@ -4,7 +4,7 @@ const projectCardContainerTmpl =
     '    </div>\n' +
     '</div>';
 const projectCardTmpl =
-    '<div class="col-md project-card-container"><div class="project-card {{availability}} animated zoomInUp">\n' +
+    '<div class="col-md project-card-container"><div class="project-card {{availability}} animated bounceInUp">\n' +
     '{{note}}' +
     '    <div class="project-header">\n' +
     '        <div class="project-title">{{title}}</div>\n' +
@@ -25,7 +25,7 @@ const projectCardNoteTmpl = '<div class="project-note">~ {{note}} ~</div>';
 const projectCardBtnTmpl = '<a href="{{link}}" target="_blank" class="btn btn-sm project-btn">{{name}}</a>\n';
 const projectCardTagTmpl = '<a href="{{link}}" target="_blank" class="project-tag">{{tag}}</a>';
 const projectCardPillTmpl = '<a href="projects.html?tag={{tag}}" class="project-language-pill{{class}}" style="background-color:{{color}};">{{language}}</a>';
-const projectSeeMoreTmpl = '<div class="row project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn project-see-more-btn">{{text}}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a></div>';
+const projectSeeMoreTmpl = '<div class="row project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn project-see-more-btn">{{text}}&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></a></div>';
 
 function buildProjectContainer(container) {
     var $projectContainer = $(projectCardContainerTmpl);

@@ -5,27 +5,35 @@
         <title>Matthew Edwards - About</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
         <link href="res/css/main.css" rel="stylesheet">
         <link href="res/css/animate.css" rel="stylesheet">
+        <link href="res/css/prism.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+        <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="res/js/prism.js"></script>
         <script type="text/javascript" src="res/js/projects.js"></script>
         <script type="text/javascript" src="res/js/main.js"></script>
         <script type="text/javascript" src="res/js/ui.js"></script>
     </head>
-    <body data-spy="scroll">
+    <body data-spy="scroll" data-target="#toc">
 
-        <div class="halftone">
-            <div class="header">
+        <div class="halftone background-overlay background-overlay-dim">
+            <div class="header animated fadeIn">
                 Matthew&nbsp;Edwards
             </div>
         </div>
 
         <div class="section-container">
+            <nav id="toc" class="toc js-toc animated fadeIn" data-toggle="toc"></nav>
+            <div class="toc-placeholder js-toc-placeholder"></div>
             <div class="section-content">
                 <h1>About Me</h1>
                 <br />
@@ -107,12 +115,6 @@
                     As a basic feature of the Code, students are placed upon their honor during all examinations, written quizzes, computer questions, homework, laboratory reports, and any other work turned in for credit, as required by the instructor.
                 </blockquote>
                 </p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="footer-container">
-                &copy; Copyright 2017-2019 by Matthew Edwards, All Rights Reserved
             </div>
         </div>
 

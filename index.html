@@ -5,44 +5,206 @@
         <title>Matthew Edwards - Portfolio</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
         <link href="res/css/main.css" rel="stylesheet">
         <link href="res/css/animate.css" rel="stylesheet">
+        <link href="res/css/prism.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="res/js/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="res/js/prism.js"></script>
         <script type="text/javascript" src="res/js/projects.js"></script>
         <script type="text/javascript" src="res/js/main.js"></script>
         <script type="text/javascript" src="res/js/ui.js"></script>
     </head>
-    <body>
-
-        <div class="halftone">
-            <div class="header">
-                Matthew&nbsp;Edwards
+    <body data-spy="scroll" data-target="#toc">
+        <div class="landing-container background-overlay background-overlay-grey js-landing">
+            <div class="landing-jumbo animated fadeInUp">
+                <div class="landing-jumbo-title">
+                    Matthew Edwards
+                </div>
+                <div class="landing-jumbo-subtitle js-landing-subtitle animated"></div>
+                <div class="landing-see-more js-landing-see-more animated fadeInUp slow">Scroll to See More<br /><i class="fas fa-angle-double-down"></i></div>
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container js-waypoint-1">
+            <nav id="toc" class="toc js-toc animated fadeOut" data-toggle="toc"></nav>
+            <div class="toc-placeholder js-toc-placeholder"></div>
             <div class="section-content">
-                <h1>Portfolio</h1>
-                <p>Since 2019, I will have about 10 years of programming experience. My preferred programming languages include Java, Python, and C++, but I have solid experience in everything from ARM Assembly to PHP to Scala to Swift.</p>
+                <div class="landing-profile-img"></div>
+                <h1 class="js-waypoint-2">Portfolio</h1>
+                <p>I am a software engineer with 10 years of programming experience. My preferred programming languages include Java, Python, and C++, but I have solid experience in everything from ARM Assembly to PHP to Scala to Swift.</p>
+                <h2>Personal Projects</h2>
                 <p>My typical projects include those started for my own learning purposes or tools I have created to help myself in my own workflow. Game programming is also a personal hobby and I have been known to participate in <a href="https://ldjam.com/">Ludum Dare</a>. Here are my projects broken down by programming language:</p>
                 <br />
-                <div class="js-language-breakdown"></div>
-                <script>
-                    addLanguageBreakdown($('.js-language-breakdown'));
-                </script>
+                <div class="js-language-breakdown" style="min-height: 80px"></div>
                 <br />
                 <p>A collection of various projects can be found below: <a href="about.html#project-cards" style="float:right;">(What do the card colors mean?)</a></p>
             </div>
         </div>
+        <div class="halftone-divider"></div>
         <div class="album project-container-section js-personal-projects"></div>
+        <div class="halftone-divider"></div>
 
         <div class="section-container">
             <div class="section-content">
-                <h2>Coursework and Academic Projects</h2>
+                <h2>Skills and Experience</h2>
+
+                <div class="skill-container">
+                    <div class="skill-content">
+                        <h3>Cloud</h3>
+                    </div>
+                    <div class="carousel-container">
+                        <div id="cloud-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#cloud-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#cloud-carousel" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="logo-container">
+                                        <i class="fab fa-aws" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"></i>
+                                        <i class="fab fa-google" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></i>
+                                        <i class="fab fa-docker"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Docker"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fas fa-feather-alt"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Apache"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="carousel-container">
+                        <div id="tools-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#tools-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#tools-carousel" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="logo-container">
+                                        <i class="fab fa-git-square" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Git"></i>
+                                        <i class="fab fa-github" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="GitHub"></i>
+                                        <i class="fab fa-sketch" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Sketch"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-bitbucket" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Bitbucket"></i>
+                                        <i class="fab fa-confluence" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Confluence"></i>
+                                        <i class="fab fa-jira" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Jira"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Tools</h3>
+                    </div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-content">
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="carousel-container">
+                        <div id="languages-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#languages-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#languages-carousel" data-slide-to="1"></li>
+                                <li data-target="#languages-carousel" data-slide-to="2"></li>
+                                <li data-target="#languages-carousel" data-slide-to="3"></li>
+                                <li data-target="#languages-carousel" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="logo-container">
+                                        <i class="fab fa-java" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Java"></i>
+                                        <i class="fas fa-copyright" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="C / C++ / C#"></i>
+                                        <i class="fab fa-python" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Python"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-js" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
+                                        <i class="fab fa-node-js" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Node.JS"></i>
+                                        <i class="fab fa-react" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="React"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-html5" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
+                                        <i class="fab fa-css3-alt" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
+                                        <i class="fab fa-sass" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="SASS"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-php" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="PHP"></i>
+                                        <i class="fab fa-bootstrap" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Bootstrap"></i>
+                                        <i class="fab fa-r-project" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="R"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-android" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Android App Development"></i>
+                                        <i class="fab fa-app-store-ios" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="iOS App Development"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="carousel-container">
+                        <div id="os-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#os-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#os-carousel" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="logo-container">
+                                        <i class="fab fa-apple" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="macOS"></i>
+                                        <i class="fab fa-windows" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Windows"></i>
+                                        <i class="fab fa-linux" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Linux"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="logo-container">
+                                        <i class="fab fa-ubuntu" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Ubuntu"></i>
+                                        <i class="fab fa-redhat" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Redhat"></i>
+                                        <i class="fab fa-raspberry-pi" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Raspbian"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Operating Systems</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-container js-waypoint-3">
+            <div class="section-content">
+                <h1>Coursework and Academic Projects</h1>
                 <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine. Projects can also be viewed by course:</p>
                 <ul>
                     <li><a href="projects.html?tag=EECS 494">EECS 494 - Computer Game Design and Development</a></li>
@@ -55,32 +217,93 @@
                     <li><a href="projects.html?tag=EECS 270">EECS 270 - Introduction to Logic Design</a></li>
                 </ul>
                 <br />
+                <br />
                 <div class="text-center">
-                    <button class="btn btn-primary" onclick="shuffleProjects()">
-                        Shuffle Projects&nbsp;&nbsp;<i class="fa fa-refresh"></i>
+                    <button class="btn btn-primary btn-lg js-shuffle-btn animated fadeOut" onclick="shuffleProjects()">
+                        Shuffle Projects&nbsp;&nbsp;<i class="fas fa-sync"></i>
                     </button>
                 </div>
                 <br />
             </div>
         </div>
+        <div class="halftone-divider"></div>
         <div class="album project-container-section js-school-projects"></div>
 
-        <div class="footer">
-            <div class="footer-container">
-                &copy; Copyright 2017-2019 by Matthew Edwards, All Rights Reserved
-            </div>
-        </div>
-
         <script>
-            $(function () {
-                loadProjectsByCategory(buildProjectContainer($('.js-personal-projects')), 'Personal', 4);
-                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
-            });
+            const backgrounds = ["background-mountains"]; //, "background-stars", "background-galaxy"];
+
+            var subtitleIndex = 0;
+            const subtitles = ["Software Engineer", "Designer", "Entrepreneur", "Problem Solver"];
+
+            function updateSubtitle() {
+                $('.js-landing-subtitle').removeClass('flipInX').addClass('flipOutX');
+                setTimeout(function() {
+                    if (subtitleIndex >= subtitles.length) {
+                        subtitleIndex = 0;
+                    }
+                    $('.js-landing-subtitle').text(subtitles[subtitleIndex]);
+                    ++subtitleIndex;
+                    $('.js-landing-subtitle').removeClass('flipOutX').addClass('flipInX');
+                    setTimeout(updateSubtitle, 4000);
+                }, 500);
+            }
 
             function shuffleProjects() {
+                $('.js-shuffle-btn').attr('disabled', true);
+                $('.js-shuffle-btn').children('i').addClass('fa-spin');
                 $('.js-school-projects').empty();
                 loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
+                setTimeout(function () {
+                    $('.js-shuffle-btn').attr('disabled', false);
+                    $('.js-shuffle-btn').children('i').removeClass('fa-spin');
+                }, 1000);
             }
+
+            var waypoint1 = false;
+            $('.js-waypoint-1').waypoint(function() {
+                if (waypoint1) {
+                    return;
+                }
+                waypoint1 = true;
+                $('.js-toc').removeClass('fadeOut').addClass('fadeInUp');
+            }, {
+                offset: '80%'
+            });
+
+            var waypoint2 = false;
+            $('.js-waypoint-2').waypoint(function() {
+                if (waypoint2) {
+                    return;
+                }
+                waypoint2 = true;
+                addLanguageBreakdown($('.js-language-breakdown'));
+                loadProjectsByCategory(buildProjectContainer($('.js-personal-projects')), 'Personal', 4);
+            }, {
+                offset: '15%'
+            });
+
+            var waypoint3 = false;
+            $('.js-waypoint-3').waypoint(function() {
+                if (waypoint3) {
+                    return;
+                }
+                waypoint3 = true;
+                $('.js-shuffle-btn').removeClass('fadeOut').addClass('fadeInUp');
+                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
+            }, {
+                offset: '0%'
+            });
+
+            $(function () {
+                var randomIndex = Math.floor(Math.random() * backgrounds.length);
+                $('.js-landing').addClass(backgrounds[randomIndex]);
+                updateSubtitle();
+            });
+
+            // Scroll to top on refresh
+            // window.onbeforeunload = function () {
+            //     window.scrollTo(0, 0);
+            // }
         </script>
     </body>
 </html>
