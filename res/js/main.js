@@ -10,18 +10,21 @@ const projectCardTmpl =
     '        <div class="project-title">{{title}}</div>\n' +
     '        <div class="project-date">{{date}}</div>\n' +
     '    </div>\n' +
-    '    <div class="project-description"><div>{{description}}</div></div>\n' +
+    '    <div class="project-description">' +
+    '        <div>{{description}}</div>' +
+    '    </div>\n' +
     '    <div class="project-footer">\n' +
     '       <div class="project-btn-group btn-group">\n' +
     '           {{buttons}}\n' +
     '       </div>\n' +
-    '       <div class="project-tags">Tags:&nbsp;{{tags}}</div>\n' +
+    '       <div class="project-tags"><div class="project-pill">{{pill}}</div>Tags:&nbsp;{{tags}}</div>\n' +
     '    </div>\n' +
     '</div></div>\n';
 
 const projectCardNoteTmpl = '<div class="project-note">~ {{note}} ~</div>';
 const projectCardBtnTmpl = '<a href="{{link}}" target="_blank" class="btn btn-sm project-btn">{{name}}</a>\n';
 const projectCardTagTmpl = '<a href="{{link}}" target="_blank" class="project-tag">{{tag}}</a>';
+const projectCardPillTmpl = '<a href="projects.html?tag={{tag}}" class="project-language-pill{{class}}" style="background-color:{{color}};">{{language}}</a>';
 const projectSeeMoreTmpl = '<div class="row project-see-more-container"><a href="projects.html{{link}}" class="project-see-more btn project-see-more-btn">{{text}}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a></div>';
 
 function buildProjectContainer(container) {
@@ -231,10 +234,17 @@ function getCardHtml(project) {
         .replace("{{availability}}", availability)
         .replace("{{title}}", project.title)
         .replace("{{note}}", getNoteHtml(project.note))
-        .replace("{{date}}", project.category + " | " + project.date)
+        .replace("{{date}}",
+            "<a href=\"projects.html?category=" +
+            project.category + "\">" +
+            project.category +
+            "</a> | " +
+            project.date
+        )
+        .replace("{{pill}}", getPillHtml(project.language))
         .replace("{{description}}", project.description)
         .replace("{{buttons}}", getButtonsHtml(project.buttons))
-        .replace("{{tags}}", getTagsHtml(project.tags));
+        .replace("{{tags}}", getTagsHtml(project.language, project.tags));
     return card;
 }
 
@@ -245,6 +255,18 @@ function getNoteHtml(note) {
 
     return projectCardNoteTmpl
         .replace("{{note}}", note);
+}
+
+function getPillHtml(language) {
+    if (!language) {
+        return "";
+    }
+
+    return projectCardPillTmpl
+        .replace("{{tag}}", language === "C#" ? "C-Sharp" : language)
+        .replace("{{language}}", language)
+        .replace("{{class}}", language === "Javascript" || language === "Shell" ? " project-language-pill-dark": "")
+        .replace("{{color}}", LANG_COLOR[language]);
 }
 
 function getButtonsHtml(buttons) {
@@ -261,19 +283,22 @@ function getButtonsHtml(buttons) {
     return btnHtml;
 }
 
-function getTagsHtml(tags) {
+function getTagsHtml(language, tags) {
     if (!tags) {
         return "";
     }
 
     var tagHtml = "";
     for (var i = 0; i < tags.length; ++i) {
+        if (tags[i] === language || (tags[i] === "C-Sharp" && language === "C#")) {
+            continue;
+        }
+        if (i > 0) {
+            tagHtml += ", ";
+        }
         tagHtml += projectCardTagTmpl
             .replace("{{link}}", "projects.html?tag=" + tags[i])
             .replace("{{tag}}", tags[i]);
-        if (i + 1 < tags.length) {
-            tagHtml += ", ";
-        }
     }
     return tagHtml;
 }

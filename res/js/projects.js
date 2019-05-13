@@ -98,29 +98,6 @@ const PROJECTS = [
         ]
     },
     {
-        title: "Git Workflow Scripts",
-        date: "Winter 2018",
-        description: "A collection of Bash scripts, Makefiles, and git-hooks to improve my own workflow (with a focus on C++).",
-        source: UNAVAILABLE,
-        category: "Personal",
-        language: "Shell",
-        buttons: [
-            {
-                name: "Request Source",
-                link: "about.html#source-request"
-            }
-        ],
-        tags: [
-            "Git",
-            "Bash",
-            "Python",
-            "Workflow"
-        ]
-    },
-
-    // School ----------------------------------------------------------------------------------------------------------
-
-    {
         title: "Junkyard Brawl",
         date: "Winter 2019",
         description: "Junkyard Brawl is a fighting game where players must out-position their opponents in order to knock them around a dangerous battlefield. Each character has a different method of traversing the battlefield, rewarding players for becoming skilled and jumping, swinging, or dashing around the play area. Playable on Mac or PC with XBox controllers (local multiplayer).<br /><br />This was the final project in EECS 494: Introduction to Game Development. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
@@ -304,6 +281,26 @@ const PROJECTS = [
             "C",
             "ARM Assembly",
             "Verilog"
+        ]
+    },
+    {
+        title: "Git Workflow Scripts",
+        date: "Winter 2018",
+        description: "A collection of Bash scripts, Makefiles, and git-hooks to improve my own workflow (with a focus on C++).",
+        source: UNAVAILABLE,
+        category: "Personal",
+        language: "Shell",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            }
+        ],
+        tags: [
+            "Git",
+            "Bash",
+            "Python",
+            "Workflow"
         ]
     },
     {
@@ -807,7 +804,7 @@ const PROJECTS = [
     {
         title: "Trench",
         date: "2013",
-        description: "A small applet-based casual game written in Java.",
+        description: "A small applet-based casual game written in Java. Use color to dodge enemies, as only opposite colors can cause damage.",
         source: UNAVAILABLE,
         category: "Personal",
         language: "Java",

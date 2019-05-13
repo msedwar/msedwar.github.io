@@ -351,6 +351,34 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     background-color: #1b809e;
 }
 
+.project-pill {
+    float: right;
+    padding-left: 1em;
+}
+
+.project-language-pill {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0.2em 1em;
+    border-radius: 1em;
+}
+
+.project-language-pill:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.project-language-pill-dark {
+    color: #555555;
+}
+
+.project-language-pill-dark:hover {
+    color: #555555;
+    text-decoration: none;
+}
+
 /* Language Breakdown */
 
 .breakdown {
