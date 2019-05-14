@@ -264,7 +264,6 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     margin: 0;
     padding: 2em 0;
     width: 100%;
-    min-height: 400px;
 }
 
 .project-container {
@@ -650,3 +649,37 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     margin: 2em auto;
     box-shadow: 1px 10px 10px -8px #323034;
 }
+
+.landing-coursework-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.landing-coursework-container ul {
+    display: block;
+    flex: 1 0 0;
+    list-style-type: none;
+}
+
+.landing-coursework-container ul:not(:first-child) {
+    border-left: 1px solid #d8d8d9;
+}
+
+.landing-contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.5em 0 1.5em 0;
+    font-size: 8em;
+}
+
+.landing-contact-container a {
+    color: #292b2c;
+}
+
+.landing-contact-container a:hover {
+    color: #57595a;
+}
+
+

@@ -4,7 +4,7 @@ const projectCardContainerTmpl =
     '    </div>\n' +
     '</div>';
 const projectCardTmpl =
-    '<div class="col-md project-card-container"><div class="project-card {{availability}} animated bounceInUp">\n' +
+    '<div class="col-md project-card-container"><div class="project-card {{availability}} js-project-card animated {{animation}}">\n' +
     '{{note}}' +
     '    <div class="project-header">\n' +
     '        <div class="project-title">{{title}}</div>\n' +
@@ -33,17 +33,17 @@ function buildProjectContainer(container) {
     return $projectContainer.children(".project-container-row");
 }
 
-function loadAllProjects(container, limit, seemore) {
+function loadAllProjects(container, limit, seemore, animation) {
     if (limit === undefined) {
         limit = 10;
     }
     if (seemore === undefined) {
         seemore = true;
     }
-    loadProjectsExceptCategory(container, "", limit, seemore);
+    loadProjectsExceptCategory(container, "", limit, seemore, animation);
 }
 
-function loadProjectsByTag(container, tag, limit, seemore) {
+function loadProjectsByTag(container, tag, limit, seemore, animation) {
     if (limit === undefined) {
         limit = 10;
     }
@@ -53,7 +53,7 @@ function loadProjectsByTag(container, tag, limit, seemore) {
     var loaded = 0;
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].tags.includes(tag)) {
-            var $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i], animation));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -68,7 +68,7 @@ function loadProjectsByTag(container, tag, limit, seemore) {
     }
 }
 
-function loadProjectsByCategory(container, category, limit, seemore) {
+function loadProjectsByCategory(container, category, limit, seemore, animation) {
     if (limit === undefined) {
         limit = 10;
     }
@@ -78,7 +78,7 @@ function loadProjectsByCategory(container, category, limit, seemore) {
     var loaded = 0;
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category === category) {
-            var $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i], animation));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -93,7 +93,7 @@ function loadProjectsByCategory(container, category, limit, seemore) {
     }
 }
 
-function loadProjectsExceptCategory(container, category, limit, seemore) {
+function loadProjectsExceptCategory(container, category, limit, seemore, animation) {
     if (limit === undefined) {
         limit = 10;
     }
@@ -103,7 +103,7 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     var loaded = 0;
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].category !== category) {
-            var $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i], animation));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -118,7 +118,7 @@ function loadProjectsExceptCategory(container, category, limit, seemore) {
     }
 }
 
-function loadProjectsExceptCategoryRandom(container, category, limit, seemore) {
+function loadProjectsExceptCategoryRandom(container, category, limit, seemore, animation) {
     if (limit === undefined) {
         limit = 10;
     }
@@ -137,7 +137,7 @@ function loadProjectsExceptCategoryRandom(container, category, limit, seemore) {
 
     for (var i = 0; i < shuffledProjects.length; ++i) {
         if (shuffledProjects[i].category !== category) {
-            var $projectCard = $(getCardHtml(shuffledProjects[i]));
+            var $projectCard = $(getCardHtml(shuffledProjects[i], animation));
             $projectCard.appendTo(container);
             ++loaded;
 
@@ -210,7 +210,7 @@ function getLanguageBreakdown() {
     return languages;
 }
 
-function getCardHtml(project) {
+function getCardHtml(project, animation) {
     var availability = "";
     switch (project.source) {
         case AVAILABLE:
@@ -230,8 +230,13 @@ function getCardHtml(project) {
             break;
     }
 
+    if (animation === undefined) {
+        animation = "bounceInUp";
+    }
+
     var card = projectCardTmpl
         .replace("{{availability}}", availability)
+        .replace("{{animation}}", animation)
         .replace("{{title}}", project.title)
         .replace("{{note}}", getNoteHtml(project.note))
         .replace("{{date}}",

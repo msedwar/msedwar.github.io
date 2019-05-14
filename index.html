@@ -12,6 +12,7 @@
         <link href="res/css/main.css" rel="stylesheet">
         <link href="res/css/animate.css" rel="stylesheet">
         <link href="res/css/prism.css" rel="stylesheet">
+        <link href="res/css/logo-colors.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -35,11 +36,11 @@
             </div>
         </div>
 
-        <div class="section-container js-waypoint-1">
+        <div class="section-container js-waypoint-0 js-waypoint-1">
             <nav id="toc" class="toc js-toc animated fadeOut" data-toggle="toc"></nav>
             <div class="toc-placeholder js-toc-placeholder"></div>
             <div class="section-content">
-                <div class="landing-profile-img"></div>
+                <div class="landing-profile-img js-profile-img animated fadeOut"></div>
                 <h1 class="js-waypoint-2">Portfolio</h1>
                 <p>I am a software engineer with 10 years of programming experience. My preferred programming languages include Java, Python, and C++, but I have solid experience in everything from ARM Assembly to PHP to Scala to Swift.</p>
                 <h2>Personal Projects</h2>
@@ -58,9 +59,10 @@
             <div class="section-content">
                 <h2>Skills and Experience</h2>
 
-                <div class="skill-container">
+                <div class="skill-container js-waypoint-cloud">
                     <div class="skill-content">
                         <h3>Cloud</h3>
+                        <p class="lead">this is lead</p>
                     </div>
                     <div class="carousel-container">
                         <div id="cloud-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
@@ -71,14 +73,14 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="logo-container">
-                                        <i class="fab fa-aws" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"></i>
-                                        <i class="fab fa-google" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></i>
-                                        <i class="fab fa-docker"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Docker"></i>
+                                        <i class="fab fa-aws js-logo logo-color-mute logo-color-aws" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"></i>
+                                        <i class="fab fa-docker js-logo logo-color-mute logo-color-docker"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Docker"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fas fa-feather-alt"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Apache"></i>
+                                        <i class="fab fa-google js-logo logo-color-mute logo-color-google" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></i>
+                                        <i class="fas fa-feather-alt js-logo logo-color-mute logo-color-apache"  data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Apache"></i>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="skill-container">
+                <div class="skill-container js-waypoint-tools">
                     <div class="carousel-container">
                         <div id="tools-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
                             <ol class="carousel-indicators">
@@ -96,16 +98,16 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="logo-container">
-                                        <i class="fab fa-git-square" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Git"></i>
-                                        <i class="fab fa-github" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="GitHub"></i>
-                                        <i class="fab fa-sketch" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Sketch"></i>
+                                        <i class="fab fa-git-square js-logo logo-color-mute logo-color-git" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Git"></i>
+                                        <i class="fab fa-github js-logo logo-color-mute logo-color-github" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="GitHub"></i>
+                                        <i class="fab fa-sketch js-logo logo-color-mute logo-color-sketch" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Sketch"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-bitbucket" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Bitbucket"></i>
-                                        <i class="fab fa-confluence" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Confluence"></i>
-                                        <i class="fab fa-jira" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Jira"></i>
+                                        <i class="fab fa-bitbucket js-logo logo-color-mute logo-color-atlassian" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Bitbucket"></i>
+                                        <i class="fab fa-confluence js-logo logo-color-mute logo-color-atlassian" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Confluence"></i>
+                                        <i class="fab fa-jira js-logo logo-color-mute logo-color-atlassian" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Atlassian Jira"></i>
                                     </div>
                                 </div>
                             </div>
@@ -113,12 +115,14 @@
                     </div>
                     <div class="skill-content">
                         <h3>Tools</h3>
+                        <p class="lead">this is lead</p>
                     </div>
                 </div>
 
-                <div class="skill-container">
+                <div class="skill-container js-waypoint-languages">
                     <div class="skill-content">
                         <h3>Languages</h3>
+                        <p class="lead">this is lead</p>
                     </div>
                     <div class="carousel-container">
                         <div id="languages-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
@@ -132,36 +136,36 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="logo-container">
-                                        <i class="fab fa-java" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Java"></i>
-                                        <i class="fas fa-copyright" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="C / C++ / C#"></i>
-                                        <i class="fab fa-python" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Python"></i>
+                                        <i class="fab fa-java js-logo logo-color-mute logo-color-java" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Java"></i>
+                                        <i class="fas fa-copyright js-logo logo-color-mute logo-color-c" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="C / C++ / C#"></i>
+                                        <i class="fab fa-python js-logo logo-color-mute logo-color-python" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Python"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-js" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
-                                        <i class="fab fa-node-js" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Node.JS"></i>
-                                        <i class="fab fa-react" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="React"></i>
+                                        <i class="fab fa-js js-logo logo-color-mute logo-color-javascript" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
+                                        <i class="fab fa-node-js js-logo logo-color-mute logo-color-node" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Node.JS"></i>
+                                        <i class="fab fa-react js-logo logo-color-mute logo-color-react" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="React"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-html5" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
-                                        <i class="fab fa-css3-alt" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
-                                        <i class="fab fa-sass" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="SASS"></i>
+                                        <i class="fab fa-html5 js-logo logo-color-mute logo-color-html" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
+                                        <i class="fab fa-css3-alt js-logo logo-color-mute logo-color-css" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
+                                        <i class="fab fa-sass js-logo logo-color-mute logo-color-sass" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="SASS"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-php" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="PHP"></i>
-                                        <i class="fab fa-bootstrap" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Bootstrap"></i>
-                                        <i class="fab fa-r-project" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="R"></i>
+                                        <i class="fab fa-php js-logo logo-color-mute logo-color-php" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="PHP"></i>
+                                        <i class="fab fa-bootstrap js-logo logo-color-mute logo-color-bootstrap" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Bootstrap"></i>
+                                        <i class="fab fa-r-project js-logo logo-color-mute logo-color-r" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="R"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-android" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Android App Development"></i>
-                                        <i class="fab fa-app-store-ios" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="iOS App Development"></i>
+                                        <i class="fab fa-android js-logo logo-color-mute logo-color-android" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Android App Development"></i>
+                                        <i class="fab fa-app-store-ios js-logo logo-color-mute logo-color-ios" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="iOS App Development"></i>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="skill-container">
+                <div class="skill-container js-waypoint-os">
                     <div class="carousel-container">
                         <div id="os-carousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
                             <ol class="carousel-indicators">
@@ -179,16 +183,16 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="logo-container">
-                                        <i class="fab fa-apple" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="macOS"></i>
-                                        <i class="fab fa-windows" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Windows"></i>
-                                        <i class="fab fa-linux" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Linux"></i>
+                                        <i class="fab fa-apple js-logo logo-color-mute logo-color-apple" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="macOS"></i>
+                                        <i class="fab fa-windows js-logo logo-color-mute logo-color-microsoft" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Windows"></i>
+                                        <i class="fab fa-linux js-logo logo-color-mute logo-color-linux" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Linux"></i>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="logo-container">
-                                        <i class="fab fa-ubuntu" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Ubuntu"></i>
-                                        <i class="fab fa-redhat" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Redhat"></i>
-                                        <i class="fab fa-raspberry-pi" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Raspbian"></i>
+                                        <i class="fab fa-ubuntu js-logo logo-color-mute logo-color-ubuntu" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Ubuntu"></i>
+                                        <i class="fab fa-redhat js-logo logo-color-mute logo-color-redhat" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Redhat"></i>
+                                        <i class="fab fa-raspberry-pi js-logo logo-color-mute logo-color-raspbian" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Raspbian"></i>
                                     </div>
                                 </div>
                             </div>
@@ -196,6 +200,7 @@
                     </div>
                     <div class="skill-content">
                         <h3>Operating Systems</h3>
+                        <p class="lead">this is lead</p>
                     </div>
                 </div>
 
@@ -205,17 +210,23 @@
         <div class="section-container js-waypoint-3">
             <div class="section-content">
                 <h1>Coursework and Academic Projects</h1>
-                <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine. Projects can also be viewed by course:</p>
-                <ul>
-                    <li><a href="projects.html?tag=EECS 494">EECS 494 - Computer Game Design and Development</a></li>
-                    <li><a href="projects.html?tag=EECS 482">EECS 482 - Introduction to Operating Systems</a></li>
-                    <li><a href="projects.html?tag=EECS 388">EECS 388 - Introduction to Computer Security</a></li>
-                    <li><a href="projects.html?tag=EECS 373">EECS 373 - Introduction to Embedded System Design</a></li>
-                    <li><a href="projects.html?tag=EECS 370">EECS 370 - Introduction to Computer Organization</a></li>
-                    <li><a href="projects.html?tag=EECS 281">EECS 281 - Introduction to Data Structures and Algorithms</a></li>
-                    <li><a href="projects.html?tag=EECS 280">EECS 280 - Introduction to Programming</a></li>
-                    <li><a href="projects.html?tag=EECS 270">EECS 270 - Introduction to Logic Design</a></li>
-                </ul>
+                <p>I am studying Computer Science at the University of Michigan. Below are a few projects I have completed in my time as a Wolverine (click the "Shuffle" button to view a different, randomized subset). Projects can also be viewed by course or by primary programming language used.</p>
+                <br />
+                <div class="landing-coursework-container">
+                    <ul>
+                        <li><a href="projects.html?tag=EECS 494">EECS 494 - Computer Game Design and Development</a></li>
+                        <li><a href="projects.html?tag=EECS 482">EECS 482 - Introduction to Operating Systems</a></li>
+                        <li><a href="projects.html?tag=EECS 388">EECS 388 - Introduction to Computer Security</a></li>
+                        <li><a href="projects.html?tag=EECS 373">EECS 373 - Introduction to Embedded System Design</a></li>
+                        <li><a href="projects.html?tag=EECS 370">EECS 370 - Introduction to Computer Organization</a></li>
+                        <li><a href="projects.html?tag=EECS 281">EECS 281 - Introduction to Data Structures and Algorithms</a></li>
+                        <li><a href="projects.html?tag=EECS 280">EECS 280 - Introduction to Programming</a></li>
+                        <li><a href="projects.html?tag=EECS 270">EECS 270 - Introduction to Logic Design</a></li>
+                    </ul>
+                    <ul class="js-languages-links">
+                        <li><a href="projects.html?tag=Other">Other Languages (including Verilog)</a></li>
+                    </ul>
+                </div>
                 <br />
                 <br />
                 <div class="text-center">
@@ -228,9 +239,23 @@
         </div>
         <div class="halftone-divider"></div>
         <div class="album project-container-section js-school-projects"></div>
+        <div class="halftone-divider"></div>
+
+        <div class="section-container js-waypoint-4">
+            <div class="section-content">
+                <h1>Contact</h1>
+                <p>If you'd like to inquire more about my experience or projects, feel free to email me. You can also reach out to me on the following platforms:</p>
+                <div class="landing-contact-container js-contact-link-container">
+                    <a href="https://github.com/msedwar" target="_blank" class="animated fadeOut" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="fab fa-github js-logo logo-color-mute logo-color-github"></i></a>
+                    <a href="https://www.linkedin.com/in/matthew-edwards" class="animated fadeOut" target="_blank" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin js-logo logo-color-mute logo-color-linkedin"></i></a>
+                    <a href="https://gitlab.eecs.umich.edu/msedwar" class="animated fadeOut" target="_blank" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="GitLab"><i class="fab fa-gitlab js-logo logo-color-mute logo-color-gitlab"></i></a>
+                </div>
+            </div>
+        </div>
 
         <script>
-            const backgrounds = ["background-mountains"]; //, "background-stars", "background-galaxy"];
+            const backgrounds = ["background-mountains"];
+            const orderedLanguages = ["C", "C++", "C#", "Java", "Javascript", "Python", "Shell"]
 
             var subtitleIndex = 0;
             const subtitles = ["Software Engineer", "Designer", "Entrepreneur", "Problem Solver"];
@@ -259,45 +284,18 @@
                 }, 1000);
             }
 
-            var waypoint1 = false;
-            $('.js-waypoint-1').waypoint(function() {
-                if (waypoint1) {
-                    return;
-                }
-                waypoint1 = true;
-                $('.js-toc').removeClass('fadeOut').addClass('fadeInUp');
-            }, {
-                offset: '80%'
-            });
-
-            var waypoint2 = false;
-            $('.js-waypoint-2').waypoint(function() {
-                if (waypoint2) {
-                    return;
-                }
-                waypoint2 = true;
-                addLanguageBreakdown($('.js-language-breakdown'));
-                loadProjectsByCategory(buildProjectContainer($('.js-personal-projects')), 'Personal', 4);
-            }, {
-                offset: '15%'
-            });
-
-            var waypoint3 = false;
-            $('.js-waypoint-3').waypoint(function() {
-                if (waypoint3) {
-                    return;
-                }
-                waypoint3 = true;
-                $('.js-shuffle-btn').removeClass('fadeOut').addClass('fadeInUp');
-                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4);
-            }, {
-                offset: '0%'
-            });
-
             $(function () {
                 var randomIndex = Math.floor(Math.random() * backgrounds.length);
                 $('.js-landing').addClass(backgrounds[randomIndex]);
                 updateSubtitle();
+
+                loadProjectsByCategory(buildProjectContainer($('.js-personal-projects')), 'Personal', 4, true, "fadeOut");
+                loadProjectsExceptCategoryRandom(buildProjectContainer($('.js-school-projects')), 'Personal', 4, true, "fadeOut");
+
+                var $languagesLinks = $('.js-languages-links');
+                for (var i = orderedLanguages.length - 1; i >= 0; --i) {
+                    $("<li>" + getPillHtml(orderedLanguages[i]) + "</li>").prependTo($languagesLinks)
+                }
             });
 
             // Scroll to top on refresh
@@ -305,5 +303,6 @@
             //     window.scrollTo(0, 0);
             // }
         </script>
+        <script type="text/javascript" src="res/js/index-waypoints.js"></script>
     </body>
 </html>

@@ -11,7 +11,7 @@ const PROJECTS = [
     {
         title: "TaskPlanner",
         date: "2018 - Present",
-        description: "A web application and entrepreneurial venture. It is available as a free way to organize your to-do's or class assignments; built by students, for students. The website's stack includes an API based on Express, running on Node.JS and a frontend based on React and Nginx. Source withheld as proprietary.",
+        description: "A web application and entrepreneurial venture. It is available as a free way to organize your to-do's or class assignments; built by students, for students. The website's stack includes an API based on Express running on Node.JS and a frontend based on React and Nginx. Source withheld as proprietary.",
         source: WITHHELD,
         category: "Personal",
         language: "Javascript",
@@ -299,6 +299,7 @@ const PROJECTS = [
         tags: [
             "Git",
             "Bash",
+            "Shell",
             "Python",
             "Workflow"
         ]
@@ -428,7 +429,8 @@ const PROJECTS = [
             "EECS 270",
             "Logic Design",
             "Servo",
-            "Verilog"
+            "Verilog",
+            "Other"
         ]
     },
     {
@@ -452,7 +454,8 @@ const PROJECTS = [
             "EECS 270",
             "Logic Design",
             "Controller",
-            "Verilog"
+            "Verilog",
+            "Other"
         ]
     },
     {

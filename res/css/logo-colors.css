@@ -1,0 +1,154 @@
+.logo-color-aws {
+    transition: all 1.2s ease;
+    color: #ff9d00;
+}
+
+.logo-color-google {
+    transition: all 1.2s ease;
+    color: #4285f4;
+}
+
+.logo-color-docker {
+    transition: all 1.2s ease;
+    color: #0091e2;
+}
+
+.logo-color-apache {
+    transition: all 1.2s ease;
+    color: #a3235f;
+}
+
+.logo-color-git {
+    transition: all 1.2s ease;
+    color: #f14e32;
+}
+
+.logo-color-github {
+    transition: all 1.2s ease;
+    color: #24292e;
+}
+
+.logo-color-sketch {
+    transition: all 1.2s ease;
+    color: #fbac29;
+}
+
+.logo-color-atlassian {
+    transition: all 1.2s ease;
+    color: #2e87fb;
+}
+
+.logo-color-java {
+    transition: all 1.2s ease;
+    color: #e9242e;
+}
+
+.logo-color-c {
+    transition: all 1.2s ease;
+    color: #0b5a9a;
+}
+
+.logo-color-python {
+    transition: all 1.2s ease;
+    color: #fecb48;
+}
+
+.logo-color-javascript {
+    transition: all 1.2s ease;
+    color: #efd95b;
+}
+
+.logo-color-node {
+    transition: all 1.2s ease;
+    color: #8ec653;
+}
+
+.logo-color-react {
+    transition: all 1.2s ease;
+    color: #67dbf9;
+}
+
+.logo-color-html {
+    transition: all 1.2s ease;
+    color: #e1502f;
+}
+
+.logo-color-css {
+    transition: all 1.2s ease;
+    color: #1d74b3;
+}
+
+.logo-color-sass {
+    transition: all 1.2s ease;
+    color: #cb689a;
+}
+
+.logo-color-php {
+    transition: all 1.2s ease;
+    color: #787db3;
+}
+
+.logo-color-bootstrap {
+    transition: all 1.2s ease;
+    color: #563f7a;
+}
+
+.logo-color-r {
+    transition: all 1.2s ease;
+    color: #276bba;
+}
+
+.logo-color-android {
+    transition: all 1.2s ease;
+    color: #96bf4e;
+}
+
+.logo-color-ios:not(.logo-color-mute) {
+    transition: all 1.2s ease;
+    color: #2778f4;
+}
+
+.logo-color-apple {
+    transition: all 1.2s ease;
+    color: #A3AAAE;
+}
+
+.logo-color-microsoft {
+    transition: all 1.2s ease;
+    color: #00A4EF;
+}
+
+.logo-color-linux {
+    transition: all 1.2s ease;
+    color: #292b2c;
+}
+
+.logo-color-ubuntu {
+    transition: all 1.2s ease;
+    color: #e95420;
+}
+
+.logo-color-redhat {
+    transition: all 1.2s ease;
+    color: #eb0b18;
+}
+
+.logo-color-raspbian {
+    transition: all 1.2s ease;
+    color: #b91744;
+}
+
+.logo-color-linkedin {
+    transition: all 1.2s ease;
+    color: #0073b1;
+}
+
+.logo-color-gitlab {
+    transition: all 1.2s ease;
+    color: #fa6d33;
+}
+
+.logo-color-mute {
+    transition: all 1.2s ease;
+    color: #292b2c !important;
+}

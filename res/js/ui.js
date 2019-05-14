@@ -1,6 +1,6 @@
 const navTmpl = '<div class="nav-bar-wrapper js-navbar animated fadeIn">\n' +
     '                <div class="nav-bar">\n' +
-    '                    <a href="index.html" class="animated bounceInLeft"  data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fas fa-home"></i></a>\n' +
+    '                    <a href="index.html" class="animated bounceInLeft" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fas fa-home"></i></a>\n' +
     '                    <a href="projects.html" class="animated bounceInLeft">Projects <span class="nav-bar-projects-pill js-navbar-projects">0</span></a>\n' +
     '                    <a href="about.html" class="animated bounceInLeft">About Me</a>\n' +
     '                    <a href="awards.html" class="animated bounceInLeft">Awards</a>\n' +
@@ -168,7 +168,7 @@ $(function () {
             }
         });
         $('.js-toc-placeholder').height($('.js-toc').outerHeight());
-        $('<li><a class="nav-link" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;Back to Top</a></li>').appendTo($('.js-toc').children('.nav'));
+        $('<li><a class="nav-link" onclick="scrollToTop()">Back to Top&nbsp;&nbsp;<i class="fas fa-angle-double-up"></i></a></li>').appendTo($('.js-toc').children('.nav'));
     }
 
     $('.js-navbar-projects').html(getTotalProjects());
