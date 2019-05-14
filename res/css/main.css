@@ -216,7 +216,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 .section-container {
     background-color: #ffffff;
     margin: 0;
-    padding: 1.5em 0;
+    padding: 2em 0;
 }
 
 .section-content {
@@ -522,11 +522,11 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 .skill-content {
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto;
+    flex: 1 0 0;
     height: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     align-content: flex-end;
-    padding: 2em 2em 10em 2em;
+    padding: 2em;
 }
 
 .skill-content h3 {
