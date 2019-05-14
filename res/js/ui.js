@@ -14,6 +14,10 @@ const footerTmpl =
     '<div class="halftone-divider"></div>\n' +
     '<div class="footer">\n' +
     '    <div class="footer-container">\n' +
+    '        <a href="#" class="text-white" style="font-size:18px;text-decoration:none;" onclick="scrollToTop()">Back to Top&nbsp;&nbsp;<i class="fas fa-angle-double-up"></i></a>\n' +
+    '        <br /><br />\n' +
+    '    </div>\n' +
+    '    <div class="footer-container">\n' +
     '        <div class="footer-copyright">&copy; Copyright 2017-2019 by Matthew Edwards, All Rights Reserved</div>\n' +
     '        <br />\n' +
     '        Third-party trademarks are the property of their respective third-party owners. Presence of a third-party trademark does not mean that I have any relationship with that third-party or that the third-party endorses me or my services.\n' +
