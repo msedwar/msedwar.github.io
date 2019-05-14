@@ -21,6 +21,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="res/js/jquery.waypoints.min.js"></script>
         <script type="text/javascript" src="res/js/prism.js"></script>
         <script type="text/javascript" src="res/js/projects.js"></script>
         <script type="text/javascript" src="res/js/main.js"></script>
@@ -43,12 +44,11 @@
                 <p>I am a student at the University of Michigan, studying Computer Science in the College of Engineering. I am also double-minoring in Math and Entrepreneurship.</p>
                 <p>My typical projects include those started for my own learning purposes or tools I have created to help myself in my own workflow. Game programming is also a personal hobby and I have been known to participate in Ludum Dare. You can find a full list of my projects <a href="projects.html">here</a>.</p>
             </div>
-            <div class="section-content">
-                <h2>Skills and Experience</h2>
-                <p>My work experience can be found on my <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank">LinkedIn profile</a>.</p>
+            <div class="section-content js-waypoint-0">
+                <h2>Skills</h2>
                 <p>I have been programming for over 10 years and my preferred programming languages include Java, Python, and C++, but I have solid experience in everything from ARM Assembly to PHP to Scala to Swift. Below is a list of my skills:</p>
                 <br />
-                <table class="section-table">
+                <table class="section-table js-skills-table animated fadeOut">
                     <tr>
                         <td style="width: 8em;">General</td>
                         <td>Desktop and Mobile App Development, UX Design, Algorithm Design, Graphics, Research</td>
@@ -78,14 +78,24 @@
                     </tr>
                 </table>
             </div>
-            <div class="section-content">
-                <a name="project-cards"></a>
+            <div class="section-content js-waypoint-1">
+                <h2>Experience</h2>
+                <p>My work experience can be found on my <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank">LinkedIn profile</a>. I have worked for following organizations:</p>
+                <p class="text-center" style="font-size: 8px;">Third-party trademarks are the property of their respective third-party owners. Presence of a third-party trademark does not mean that I have any relationship with that third-party or that the third-party endorses me or my services.</p>
+                <div class="experience-container js-exp-logos">
+                    <img class="animated fadeOut" src="res/img/facebook.png" alt="Facebook, Inc." data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Facebook, Inc." />
+                    <img class="animated fadeOut" src="res/img/retailmenot.png" alt="RetailMeNot, Inc." data-trigger="hover" data-toggle="tooltip" data-placement="top" title="RetailMeNot, Inc." />
+                    <img class="animated fadeOut" src="res/img/michigan-eecs.png" alt="University of Michigan" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="University of Michigan, Department of Electrical Engineering and Computer Science" />
+                    <img class="animated fadeOut" src="res/img/virginia-tech.png" alt="Virginia Tech" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="Virginia Polytechnic and State University, Department of Computer Science" />
+                </div>
+            </div>
+            <div class="section-content js-waypoint-2">
                 <h2>How to Use Project Cards</h2>
                 <p>Project cards (like the one below) are used to convey information about projects that are finished or in progress. Their source code availability can be seen at a glance using the legend below. Each project has links in the bottom left of the card. In the bottom right, each project has a set of tags and the primary language used. The project category is in the top right next to the active project date.</p>
                 <div class="js-project-card">
                 </div>
                 <script>
-                    loadProjectByTitle($('.js-project-card'), "Personal Website");
+                    loadProjectByTitle($('.js-project-card'), "Personal Website", "fadeOut");
                 </script>
                 <br />
                 <h3>Legend</h3>
@@ -120,6 +130,46 @@
                 </p>
             </div>
         </div>
+
+        <script>
+            var waypoint0 = false;
+            $('.js-waypoint-0').waypoint(function() {
+                if (waypoint0) {
+                    return;
+                }
+                waypoint0 = true;
+                $('.js-skills-table').removeClass('fadeOut').addClass('fadeInUp');
+            }, {
+                offset: '50%'
+            });
+
+            var waypoint1 = false;
+            $('.js-waypoint-1').waypoint(function() {
+                if (waypoint1) {
+                    return;
+                }
+                waypoint1 = true;
+                $('.js-exp-logos').children('img').each(function() {
+                    var $component = $(this);
+                    setTimeout(function() {
+                        $component.removeClass('fadeOut').addClass('bounceInUp');
+                    }, Math.floor(Math.random() * 300));
+                });
+            }, {
+                offset: '30%'
+            });
+
+            var waypoint2 = false;
+            $('.js-waypoint-2').waypoint(function() {
+                if (waypoint2) {
+                    return;
+                }
+                waypoint2 = true;
+                $('.js-project-card').removeClass('fadeOut').addClass('bounceInUp');
+            }, {
+                offset: '50%'
+            });
+        </script>
 
     </body>
 </html>

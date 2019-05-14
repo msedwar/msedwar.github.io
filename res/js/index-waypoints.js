@@ -28,7 +28,10 @@ $('.js-waypoint-2').waypoint(function() {
     waypoint2 = true;
     addLanguageBreakdown($('.js-language-breakdown'));
     $('.js-personal-projects').find('.js-project-card').each(function() {
-        $(this).removeClass('fadeOut').addClass('bounceInUp');
+        var $component = $(this);
+        setTimeout(function() {
+            $component.removeClass('fadeOut').addClass('bounceInUp');
+        }, Math.floor(Math.random() * 200));
     });
 }, {
     offset: '15%'
@@ -42,7 +45,10 @@ $('.js-waypoint-3').waypoint(function() {
     waypoint3 = true;
     $('.js-shuffle-btn').removeClass('fadeOut').addClass('fadeInUp');
     $('.js-school-projects').find('.js-project-card').each(function() {
-        $(this).removeClass('fadeOut').addClass('bounceInUp');
+        var $component = $(this);
+        setTimeout(function() {
+            $component.removeClass('fadeOut').addClass('bounceInUp');
+        }, Math.floor(Math.random() * 200));
     });
     }, {
     offset: '0%'

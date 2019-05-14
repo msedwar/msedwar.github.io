@@ -682,4 +682,19 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     color: #57595a;
 }
 
+/* About Page */
 
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2em auto 3em auto;
+}
+
+.experience-container img {
+    flex: 0 0 auto;
+    max-height: 6em !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 2em auto;
+}

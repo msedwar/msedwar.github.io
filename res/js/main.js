@@ -152,10 +152,10 @@ function loadProjectsExceptCategoryRandom(container, category, limit, seemore, a
     }
 }
 
-function loadProjectByTitle(container, title) {
+function loadProjectByTitle(container, title, animation) {
     for (var i = 0; i < PROJECTS.length; ++i) {
         if (PROJECTS[i].title === title) {
-            var $projectCard = $(getCardHtml(PROJECTS[i]));
+            var $projectCard = $(getCardHtml(PROJECTS[i], animation));
             $projectCard.appendTo(container);
             return;
         }
