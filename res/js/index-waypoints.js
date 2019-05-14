@@ -54,6 +54,24 @@ $('.js-waypoint-4').waypoint(function() {
         return;
     }
     waypoint4 = true;
+    $('.js-download-link-container').children('a').each(function() {
+        $(this).removeClass('fadeOut').addClass('fadeInUp');
+    });
+    setTimeout(function() {
+        $('.js-download-link-container').find('i.js-logo').each(function() {
+            $(this).removeClass('logo-color-mute');
+        });
+    }, 1000);
+}, {
+    offset: '30%'
+});
+
+var waypoint5 = false;
+$('.js-waypoint-5').waypoint(function() {
+    if (waypoint5) {
+        return;
+    }
+    waypoint5 = true;
     $('.js-contact-link-container').children('a').each(function() {
         $(this).removeClass('fadeOut').addClass('fadeInUp');
     });
@@ -63,7 +81,7 @@ $('.js-waypoint-4').waypoint(function() {
         });
     }, 1000);
 }, {
-    offset: '25%'
+    offset: '30%'
 });
 
 var waypointCloud = false;

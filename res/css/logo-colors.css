@@ -148,6 +148,11 @@
     color: #fa6d33;
 }
 
+.logo-color-download {
+    transition: all 1.2s ease;
+    color: #717a82;
+}
+
 .logo-color-mute {
     transition: all 1.2s ease;
     color: #292b2c !important;
