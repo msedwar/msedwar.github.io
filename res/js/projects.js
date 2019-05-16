@@ -755,6 +755,25 @@ const PROJECTS = [
     // Older -----------------------------------------------------------------------------------------------------------
 
     {
+        title: "Stock Viewer",
+        date: "2016",
+        description: "Uses historical stock data from Yahoo Finance to generate a visualization of the stock performance in the given date range.",
+        source: AVAILABLE,
+        category: "Personal",
+        language: "Java",
+        buttons: [
+            {
+                name: "Github",
+                link: "https://github.com/msedwar/stock-viewer"
+            }
+        ],
+        tags: [
+            "Finance",
+            "Visualization",
+            "Java"
+        ]
+    },
+    {
         title: "Decentralized Election System",
         note: "Cutler-Bell Prize in High School Computing (National Winner, 2015)",
         date: "2015 - 2016",
