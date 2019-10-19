@@ -18,7 +18,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -44,7 +44,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -69,7 +69,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -93,7 +93,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -118,7 +118,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -143,7 +143,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -260,7 +260,7 @@ const PROJECTS = [
             },
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -294,7 +294,7 @@ const PROJECTS = [
             },
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -324,7 +324,7 @@ const PROJECTS = [
             },
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -358,7 +358,7 @@ const PROJECTS = [
             },
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -392,7 +392,7 @@ const PROJECTS = [
             },
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -417,7 +417,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -442,7 +442,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             }
         ],
         tags: [
@@ -463,7 +463,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -490,7 +490,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -516,7 +516,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -542,7 +542,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -567,7 +567,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -592,7 +592,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -617,7 +617,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -640,7 +640,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -662,7 +662,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -687,7 +687,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -712,7 +712,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -738,7 +738,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -764,7 +764,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -789,7 +789,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -813,7 +813,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -840,7 +840,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -863,7 +863,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -887,7 +887,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             },
             {
                 name: "Honor Code",
@@ -962,7 +962,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             }
         ],
         tags: [
@@ -982,7 +982,7 @@ const PROJECTS = [
         buttons: [
             {
                 name: "Request Source",
-                link: "about.html#source-request"
+                link: "index.html#source-request"
             }
         ],
         tags: [
