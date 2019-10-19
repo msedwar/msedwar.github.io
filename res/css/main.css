@@ -485,6 +485,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 .breakdown-label {
     flex: 0 auto;
+    margin: 0.5em;
 }
 
 .breakdown div.progress {

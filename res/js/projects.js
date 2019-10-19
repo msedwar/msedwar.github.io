@@ -9,6 +9,155 @@ const PROJECTS = [
     // Newer -----------------------------------------------------------------------------------------------------------
 
     {
+        title: "Paxos-based Key/Value Store",
+        date: "Fall 2019",
+        description: "Designed and implemented a key/value service that was fault-tolerant using Paxos. This was accomplished by creating a set of replicas that would process all client requests in the same order, using Paxos to agree on the order. Paxos would get the agreement right even if some of the replicas were unavailable, or had unreliable network connections, or even if subsets of the replicas were isolated in their own network partitions. As long as Paxos can assemble a majority of replicas, it can process client operations. Replicas that were not in the majority can catch up later by asking Paxos for operations that they missed.<br /><br />This was the third project in EECS 491: Introduction to Distributed Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 491",
+        language: "Go",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 491",
+            "Go",
+            "Viewservice",
+            "Server",
+            "Paxos",
+            "Distributed Systems"
+        ]
+    },
+    {
+        title: "Distributed Key/Value Store",
+        date: "Fall 2019",
+        description: "Designed and implemented a key/value service that was fault-tolerant using a form of primary/backup replication. In order to ensure that all parties (clients and servers) agree on which server is the primary, and which is the backup, we'll introduce a kind of master server, called the viewservice. The viewservice monitors whether each available server is alive or dead. If the current primary or backup becomes dead, the viewservice selects a server to replace it. A client checks with the viewservice to find the current primary. The servers cooperate with the viewservice to ensure that at most one primary is active at a time.<br /><br />This was the second project in EECS 491: Introduction to Distributed Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 491",
+        language: "Go",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 491",
+            "Go",
+            "Viewservice",
+            "Server",
+            "Distributed Systems"
+        ]
+    },
+    {
+        title: "MapReduce",
+        date: "Fall 2019",
+        description: "Designed and implemented a MapReduce library as a way to learn the Go programming language and as a way to learn about fault tolerance in distributed systems.<br /><br />This was the first project in EECS 491: Introduction to Distributed Systems. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 491",
+        language: "Go",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 491",
+            "Go",
+            "MapReduce",
+            "Distributed Systems"
+        ]
+    },
+    {
+        title: "Scheme Interpreter",
+        date: "Fall 2019",
+        description: "Implemented an interpreter for a subset of the R5RS Scheme programming language.<br /><br />This was the third project in EECS 490: Introduction to Programming Languages. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 490",
+        language: "Python",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 490",
+            "Python",
+            "Scheme",
+            "Compiler",
+            "Interpreter"
+        ]
+    },
+    {
+        title: "Scheme Lexer and Parser",
+        date: "Fall 2019",
+        description: "Implemented a lexer and parser for the R5RS Scheme programming language. This was done entirely in Scheme itself.<br /><br />This was the second project in EECS 490: Introduction to Programming Languages. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 490",
+        language: "Scheme",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 490",
+            "Scheme",
+            "Compiler",
+            "Lexer",
+            "Parser"
+        ]
+    },
+    {
+        title: "PageRank",
+        date: "Fall 2019",
+        description: "Implemented a basic graph library in Python 3 and then implemented a simplified version of PageRank, a famous algorithm in search-engine optimization.<br /><br />This was the first project in EECS 490: Introduction to Programming Languages. Source available on request to non-students for personal evaluation, it is unavailable to students due to the University of Michigan Engineering Honor Code.",
+        source: SCHOOL,
+        category: "EECS 490",
+        language: "Python",
+        buttons: [
+            {
+                name: "Request Source",
+                link: "about.html#source-request"
+            },
+            {
+                name: "Honor Code",
+                link: "https://bulletin.engin.umich.edu/rules/"
+            }
+        ],
+        tags: [
+            "EECS 490",
+            "Python",
+            "PageRank",
+            "Graphs"
+        ]
+    },
+    {
         title: "TaskPlanner",
         date: "2018 - Present",
         description: "A web application and entrepreneurial venture. It is available as a free way to organize your to-do's or class assignments; built by students, for students. The website's stack includes an API based on Express running on Node.JS and a frontend based on React and Nginx. Source withheld as proprietary.",

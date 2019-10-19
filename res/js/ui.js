@@ -36,6 +36,9 @@ const LANG_COLOR = {
     "C#": "#178600",
     "Python": "#654fa5",
     "Shell": "#89e051",
+    "Go": "#00ADD8",
+    "Scheme": "#1e4aec",
+    "Scala": "#c22d40",
     "Other": "#555555"
 };
 
@@ -128,8 +131,8 @@ function addLanguageBreakdown(container) {
                 percent -= -percentLeft;
             }
             var $langBar = $('<div class="progress-bar" style="width:0;'
-                + 'background-color:' + (LANG_COLOR.hasOwnProperty(sorted[i][0]) ? LANG_COLOR[sorted[i][0]] : LANG_COLOR["Other"])
-                + ';"></div>'
+                + 'background:' + (LANG_COLOR.hasOwnProperty(sorted[i][0]) ? LANG_COLOR[sorted[i][0]] : LANG_COLOR["Other"])
+                + ';" title="' + sorted[i][0] + '"></div>'
             );
             $langBar.appendTo($bar);
             $langBar.animate({"width": percent + "%"}, 1500, "swing");
