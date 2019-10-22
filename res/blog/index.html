@@ -1,5 +1,13 @@
 {{> html_header title="Matthew Edwards - Blog" }}
     {{#> section_content }}
-        <h1>Blog</h1>
+        <h1>Recent Articles</h1>
+        <div class="article-related-container">
+            {{> article_related (fetch_related 0 article_metadata null null) }}
+            {{> article_related (fetch_related 1 article_metadata null null) }}
+            {{> article_related (fetch_related 2 article_metadata null null) }}
+            {{> article_related (fetch_related 3 article_metadata null null) }}
+            {{> article_related (fetch_related 4 article_metadata null null) }}
+            {{> article_related (fetch_related 5 article_metadata null null) }}
+        </div>
     {{/ section_content }}
 {{> html_footer }}

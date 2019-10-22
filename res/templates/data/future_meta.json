@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "arduino-led-patterns",
+    "title": "Creating Patterns on an LED Bar",
+    "description": "Creating a configurable LED Bar using Arduino and Shift Registers",
+    "date": "October 21, 2019",
+    "tags": ["Arduino", "Microcontroller", "LEDs", "Interrupts"]
+  },
+  {
+    "slug": "7-segment-display-driver",
+    "title": "Writing a Driver for 7 Segment Displays",
+    "description": "How to write an Arduino library for the Adafruit 0.56\" 4-Digit 7-Segment Display",
+    "date": "October 23, 2019",
+    "thumbnail": "https://cdn-shop.adafruit.com/970x728/811-00.jpg",
+    "tags": ["Arduino", "Microcontroller", "LEDs", "Driver", "Adafruit"]
+  }
+]

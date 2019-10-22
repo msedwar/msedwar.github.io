@@ -9,7 +9,7 @@
         <link rel="shortcut icon" type="image/png" href="../res/img/favicon.png" />
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
@@ -46,29 +46,64 @@
             </div>
         </div>
         <div class="section-container">    <div class="section-content animated fadeIn slow delay-025s">
-            <div class="article-date">October 19, 2019</div>
+            <div class="article-date">October 22, 2019</div>
             <h1 class="article-title">Burning an Arduino Bootloader</h1>
             <div class="article-description">How to use Arduino as ISP to burn a bootloader onto a made-from-scratch Arduino</div>
+                <img src="../res/img/blog/burning-arduino-bootloader/thumb.png" class="article-thumbnail" />
     </div>    <div class="section-content article-section animated fadeIn slow delay-025s">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod eros et dui lacinia ultricies. Pellentesque dapibus tempor lorem at feugiat. Sed quis scelerisque lectus. Maecenas bibendum vestibulum ipsum a tempus. Aenean tincidunt finibus purus, ac feugiat metus tempus eget. Donec porttitor auctor porttitor. Sed a ultrices ligula. Etiam et metus id nisl venenatis blandit ac pellentesque orci.
+            <p>
+                So, you have created your first from-scratch Arduino and are ready to start programming. Congratulations!
+                The first thing to do to your fresh board is to burn a bootloader onto the chip.
+                The bootloader is a small program that the processor will start running when it is first powered on.
+                In Arduino's case, the bootloader's main job is to detect whether your computer is trying to send it a new program
+                (for example, pressing the "Upload" button from the Arduino IDE).
             </p>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sagittis, ante sed fringilla fermentum, dui magna placerat lectus, eu lobortis enim mauris ac sapien. Sed ullamcorper, ligula quis euismod iaculis, mauris erat auctor lorem, et cursus purus sapien nec metus. Integer et dolor sit amet dui dapibus consequat. Integer sed nisl nunc. Sed at tincidunt justo. Nam dignissim dignissim orci et pharetra. Ut ut purus magna. Curabitur accumsan quam a tempus fermentum. Sed ut erat eget tortor porta porta. Nulla at tincidunt arcu. Morbi aliquam pharetra vestibulum. Maecenas at vulputate erat, in dictum augue. Aenean lobortis nisl nec dictum eleifend. In hac habitasse platea dictumst. Nam laoreet arcu quam, a accumsan risus hendrerit id.
+            <p>
+                One of the main issues with my custom board was that it had no direct USB interface.
+                This would make burning a bootloader and uploading programs more difficult, but not impossible.
+                On my custom board, I had a six pin ICSP header. This allows the board to communicate over SPI (instead of UART
+                via USB), and I could load the bootloader that way.
             </p>
-            <p>Nunc et est a ex scelerisque ultrices tristique nec tellus. Phasellus eu sagittis libero. In tincidunt diam purus, ut hendrerit quam pulvinar nec. Morbi sollicitudin, sapien non tempus varius, sapien mauris facilisis lorem, et varius felis velit ultricies augue. Vestibulum non nisi sit amet elit luctus tempor sed condimentum enim. Sed vestibulum urna ut libero tempus interdum. Donec nisl magna, interdum sit amet vehicula quis, tincidunt feugiat lectus.
+            <p>
+                My solution was to use a different programmer on the Arduino IDE known as the "Arduino as ISP", in which you can
+                configure a separate Arduino to act as the in-system programmer for your original microcontroller board.
+                The official Arduino documentation has a fairly
+                <a href="https://www.arduino.cc/en/tutorial/arduinoISP#toc2" target="_blank">good tutorial</a> on how to set this
+                up with your IDE and Arduino. Remember that processors might have different BAUD rates at which they can communicate
+                over SPI. The ArduinoISP sketch has some configuration to account for this near line 140:
             </p>
-            <p>Donec ac tristique erat. Suspendisse congue hendrerit tellus, non ultricies libero dapibus non. Etiam magna sapien, tincidunt vitae gravida vel, tincidunt non dui. Vestibulum convallis tempor felis, at pretium lorem pharetra et. Aliquam facilisis ex metus, sed lacinia nisl elementum sit amet. Quisque a magna nec ipsum cursus dapibus in non augue. Vestibulum sed tortor posuere, sagittis justo ac, sodales lectus.
+            <pre class="line-numbers code-block"><code class="language-cpp">
+            // Configure the baud rate:
+            
+            #define BAUDRATE	19200
+            // #define BAUDRATE	115200
+            // #define BAUDRATE	1000000
+            </code></pre><p>
+                The second issue I had was that the processor on my custom board was an ATmega328pb, which is a slightly
+                different chip from the standard ATmega328p that the Arduino uses. In fact, when you tried to burn the
+                bootloader to my custom board using the Arduino IDE, you would get the following error with verbose uploads:
             </p>
-            <p>Vivamus ut nisi non nunc porttitor tincidunt. Proin pharetra arcu consequat elit suscipit lacinia. Phasellus rutrum rutrum dapibus. Nam vulputate, augue nec tincidunt venenatis, est risus ornare nunc, in maximus ante mi id est. Nunc dictum id mi vel commodo. Nulla facilisi. Pellentesque nisi enim, vestibulum a luctus in, tempor sit amet nunc. Sed elit elit, egestas eget felis cursus, commodo porta turpis. Proin at sapien tincidunt, varius risus aliquet, vestibulum nulla.
+            <pre class="code-block"><code class="language-less">
+            avrdude: stk500_getsync() attempt 1 of 10: not in sync: resp=0x00
+            avrdude: stk500_getsync() attempt 2 of 10: not in sync: resp=0x00
+            avrdude: stk500_getsync() attempt 3 of 10: not in sync: resp=0x00
+            avrdude: stk500_getsync() attempt 4 of 10: not in sync: resp=0x00
+            avrdude: stk500_getsync() attempt 5 of 10: not in sync: resp=0x00
+            
+            ...
+            
+            Error while burning bootloader.
+            </code></pre>
+            <p>
+                I solved this by using <a href="https://github.com/MCUdude/MiniCore" target="_blank">MiniCore, a hardware library
+                package for Arduino</a>. One of its strengths was that it supported all variants of ATmega, including the PB
+                variant. In order to install it, I pulled the GitHub repo onto my local machine and moved its folder into
+                <code class="language-bash">~/Documents/Arduino/hardware/</code>. Then open Arduino IDE (restart it if you had it open already), and a new
+                category in the boards menu called "MiniCore" will show up.
             </p>
-            <p>In vitae urna convallis, pellentesque mi ac, semper lectus. Quisque vulputate leo vitae vulputate finibus. Nulla mollis dui in rutrum dapibus. Quisque non odio arcu. Proin eu mi nec nisl vehicula varius. Ut eleifend ipsum eget venenatis consequat. Pellentesque ullamcorper urna nec commodo venenatis. Vestibulum consequat tortor purus, at gravida arcu accumsan sit amet.
-            </p>
-            <p>Integer venenatis tempus sapien nec vestibulum. Mauris rhoncus magna arcu, in tristique neque fringilla non. Ut eget dui et erat malesuada iaculis a sed metus. Vivamus a pharetra sem, et maximus dui. Proin accumsan fermentum purus, nec placerat magna volutpat nec. Curabitur pellentesque ipsum libero, eu efficitur arcu aliquam id. Praesent bibendum, nisl ut ullamcorper tristique, nibh felis molestie massa, nec sagittis ante felis at sapien. Vivamus ut mauris ut dolor porta malesuada quis a sem. Phasellus eget condimentum ligula. Morbi scelerisque vestibulum mauris, nec posuere massa pulvinar et. Nullam cursus dui eu felis laoreet sodales. Proin tellus velit, malesuada a neque sed, consequat suscipit sem. Donec tincidunt lacus at nibh rutrum, at consectetur mi fringilla. Nunc nec augue leo. Etiam fermentum, nulla quis ultricies pharetra, est elit rhoncus ex, at vehicula arcu enim sed enim.
-            </p>
-            <p>In vulputate urna sed quam viverra fringilla. Nam tristique sem nec nunc dignissim, et molestie nisl imperdiet. Nullam sit amet accumsan lectus. Quisque eget sagittis diam. Suspendisse quis efficitur massa, eu sagittis nunc. Nulla tincidunt sagittis bibendum. Vestibulum vel dui justo. Nullam non lorem non arcu ultricies viverra. Phasellus eleifend a risus vitae luctus. Mauris sed lacus et nibh interdum porta. Phasellus eros sapien, lobortis ac felis vitae, porta mollis augue. Phasellus sit amet laoreet quam, ac bibendum tortor.
-            </p>
-            <p>Aenean laoreet iaculis turpis in commodo. Donec pellentesque tellus id ligula pulvinar, at blandit quam fermentum. Duis vitae augue a mi venenatis luctus. Aenean cursus turpis ut diam hendrerit, in rhoncus est maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur molestie vel metus et faucibus. Mauris at vestibulum felis. Curabitur non tincidunt velit, nec vulputate erat.
-            </p>
-            <p>Aenean viverra ipsum eu malesuada facilisis. Fusce vehicula felis eros, vitae laoreet libero pharetra ut. Vestibulum euismod vulputate tincidunt. Etiam posuere quam et massa tincidunt elementum. Nulla sit amet interdum lectus. Ut accumsan aliquet nisl vitae feugiat. Fusce aliquet sem ac leo molestie, a ultricies ipsum ultricies. Aliquam iaculis, nibh non feugiat vulputate, risus tortor mattis leo, id porttitor erat nulla sed turpis. Fusce pulvinar odio tellus, eget accumsan est condimentum consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum viverra vestibulum. Sed non lorem quis lorem molestie tempor non quis sem. Proin tincidunt mollis quam, ut gravida eros sodales sit amet. Aliquam lacinia aliquam est id vulputate.
+            <p>
+                I could then burn the bootloader and load the "Blink" program. Now I have a small, working Arduino that I was able
+                to make and program for a fraction of the normal retail cost!
             </p>
     </div>    <div class="section-content animated fadeIn slow delay-025s">
             <div class="article-separator"></div>
@@ -76,8 +111,11 @@
                 <a href="index.html?tag=Arduino"><div class="article-tag">Arduino</div></a>
                 <a href="index.html?tag=Microcontroller"><div class="article-tag">Microcontroller</div></a>
             </div>
-    </div><div class="section-content animated fadeIn slow delay-025s">
+    </div><div class="section-content">
             <hr />
+            <div>Continue reading:</div>
+            <div class="article-related-container">
+            </div>
     </div>        </div>
     </body>
 </html>

@@ -6,6 +6,12 @@
     {{/each}}
     </div>
 {{/ section_content }}
-{{#> section_content class=" animated fadeIn slow delay-025s" }}
+{{#> section_content }}
     <hr />
+    <div>Continue reading:</div>
+    <div class="article-related-container">
+        {{> article_related (fetch_related 0 article_metadata tags date) }}
+        {{> article_related (fetch_related 1 article_metadata tags date) }}
+        {{> article_related (fetch_related 2 article_metadata tags date) }}
+    </div>
 {{/ section_content }}
