@@ -4,9 +4,17 @@
       "slug": "burning-arduino-bootloader",
       "title": "Burning an Arduino Bootloader",
       "description": "How to use Arduino as ISP to burn a bootloader onto a made-from-scratch Arduino",
-      "date": "October 22, 2019",
+      "date": "October 21, 2019",
       "thumbnail": "../res/img/blog/burning-arduino-bootloader/thumb.png",
       "tags": ["Arduino", "Microcontroller"]
+    },
+    {
+      "slug": "arduino-led-patterns",
+      "title": "Creating Patterns on an LED Bar",
+      "description": "Creating a configurable LED Bar using Arduino and Shift Registers",
+      "date": "October 22, 2019",
+      "thumbnail": "https://cdn.sparkfun.com//assets/parts/3/9/2/8/09935-06.jpg",
+      "tags": ["Arduino", "Microcontroller", "LEDs", "Interrupts", "Code"]
     }
   ]
 }
