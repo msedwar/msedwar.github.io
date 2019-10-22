@@ -1,0 +1,10 @@
+{{#if title }}
+<div class="article-related-card animated fadeIn" onclick="window.location='{{ slug }}.html';">
+    <div class="article-related-card-title">{{ title }}</div>
+    <div class="article-related-card-description">{{ description }}</div>
+    <img class="article-related-card-thumbnail" src="{{ thumbnail }}" />
+    <div class="article-related-card-footer">
+        <div class="article-related-card-date">{{ date }}</div>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,8 @@
+{{#> section_content class=" animated fadeIn slow delay-025s" }}
+    <div class="article-date">{{ date }}</div>
+    <h1 class="article-title">{{ title }}</h1>
+    <div class="article-description">{{ description }}</div>
+    {{#if thumbnail}}
+        <img src="{{ thumbnail }}" class="article-thumbnail" />
+    {{/if}}
+{{/ section_content }}

@@ -12,10 +12,13 @@ module.exports = function(grunt) {
                     dest: 'blog/',
                     ext: '.html'
                 }],
-                // helpers: 'res/templates/helpers/**/*.js',
-                // templateData: 'res/templates/data/**/*.json',
+                helpers: 'res/templates/helpers/**/*.js',
+                templateData: 'res/templates/data/**/*.json',
                 partials: 'res/templates/partials/**/*.hbs',
-                registerFullPath: false
+                registerFullPath: false,
+                globals: [
+                    'res/templates/data/article_metadata.json'
+                ]
             }
         },
         exec: {

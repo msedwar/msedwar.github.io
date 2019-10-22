@@ -1,0 +1,12 @@
+{
+  "article_metadata": [
+    {
+      "slug": "burning-arduino-bootloader",
+      "title": "Burning an Arduino Bootloader",
+      "description": "How to use Arduino as ISP to burn a bootloader onto a made-from-scratch Arduino",
+      "date": "October 22, 2019",
+      "thumbnail": "../res/img/blog/burning-arduino-bootloader/thumb.png",
+      "tags": ["Arduino", "Microcontroller"]
+    }
+  ]
+}
