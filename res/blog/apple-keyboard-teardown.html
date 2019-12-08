@@ -1,0 +1,78 @@
+{{ load_metadata article_metadata 'apple-keyboard-teardown' }}
+{{#> blog_page this }}
+
+{{#> article_section }}
+<p>
+    When I was in middle school, I was able to salvage an M2452 Mac keyboard made in 1998 from a surplus pile.
+    After many years of service as my primary mechanical keyboard, it started to show some wear. This particular type of
+    mechanical keyboard was hard to clean and had no strain-relief for the USB cable on the back. Some of the keys stopped
+    working altogether.
+</p>
+<p>
+    I have since found myself with a free Sunday, so decided to see what I could do, if anything, to repair it.
+</p>
+{{/ article_section }}
+
+{{#> article_section }}
+<h2>Teardown</h2>
+<p>
+    The first step in the repair was getting into the plastic casing. On the back of the keyboard are four T2 Phillip's
+    screws, two of which had washers.
+</p>
+{{#> image this src='photo1.jpg' }}{{/image}}
+{{#> image this src='photo2.jpg' }}{{/image}}
+
+<p>
+    Next I had to remove the top-plate so I could gain access to the underlying keyboard circuit. This proved fairly difficult,
+    and ended up taking me a little over an hour to remove. I took off several keys from the bottom row of the keyboard to make
+    the clasps at the bottom of the top-plate more accessible. I then used a wedge to gently move the catches from the top-plate
+    down and off the clasps. This allowed me to completely remove the top-plate.
+</p>
+{{#> image this src='photo3.jpg' }}{{/image}}
+{{#> image this src='photo4.jpg' }}{{/image}}
+
+<p>
+    I then exposed the main wiring that concerned me, which was the connection from the main board to the USB.
+</p>
+{{#> image this src='photo5.jpg' }}{{/image}}
+{{/ article_section }}
+
+{{#> article_section }}
+<h2>Repair</h2>
+<p>
+    First part of the repair was cleaning the keyboard, as the keys had accumulated a lot of dust and dirt. I removed all the keys
+    and then cleaned the entire case.
+</p>
+{{#> image this src='photo6.jpg' }}{{/image}}
+{{#> image this src='photo7.jpg' }}{{/image}}
+
+<p>
+    I had to cut the USB cable and de-solder the connections to the USB controller.
+</p>
+{{#> image this src='photo8.jpg' }}{{/image}}
+{{#> image this src='photo9.jpg' }}{{/image}}
+
+<p>
+    I then stripped the USB cable and re-soldered the connections that had broken. I also replaced the decoupling capacitor (16V, 100uF)
+    next to the power button. Additionally, make sure that ground is connected to
+    the metal parts of the case and the USB connector (as this is a safety feature).
+</p>
+{{#> image this src='photo11.jpg' }}{{/image}}
+{{#> image this src='photo13.jpg' }}{{/image}}
+{{/ article_section }}
+
+{{#> article_section }}
+<h2>Rebuild</h2>
+<p>
+    Finally, I tested and reassembled the keyboard with a stronger strain relief.
+</p>
+{{#> image this src='photo14.jpg' }}{{/image}}
+{{#> image this src='photo15.jpg' }}{{/image}}
+
+<p>
+    After doing some testing, the keyboard works like new again!
+</p>
+{{#> image this src='thumb.jpg' }}{{/image}}
+{{/ article_section }}
+
+{{/ blog_page }}

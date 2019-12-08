@@ -730,6 +730,15 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     margin: 2em auto;
 }
 
+.article-image {
+    display: block;
+    max-width: 100%;
+    max-height: 40em;
+    width: auto;
+    height: auto;
+    margin: 2em auto;
+}
+
 .article-section {
     font-size: 18px;
     line-height: 1.8em;

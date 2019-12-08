@@ -15,6 +15,14 @@
       "date": "October 22, 2019",
       "thumbnail": "https://cdn.sparkfun.com//assets/parts/3/9/2/8/09935-06.jpg",
       "tags": ["Arduino", "Microcontroller", "LEDs", "Interrupts", "Code"]
+    },
+    {
+      "slug": "apple-keyboard-teardown",
+      "title": "Inside a 1998 Apple Mechanical Keyboard",
+      "description": "A 1998 Apple mechanical keyboard that I salvaged from a computer surplus pile recently broke, here is how I went about fixing it",
+      "date": "December 8, 2019",
+      "thumbnail": "../res/img/blog/apple-keyboard-teardown/thumb.jpg",
+      "tags": ["Refurbish", "Soldering"]
     }
   ]
 }
