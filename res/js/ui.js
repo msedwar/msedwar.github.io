@@ -18,7 +18,7 @@ const footerTmpl =
     '        <br /><br />\n' +
     '    </div>\n' +
     '    <div class="footer-container">\n' +
-    '        <div class="footer-copyright">&copy; Copyright 2017-2019 by Matthew Edwards, All Rights Reserved</div>\n' +
+    '        <div class="footer-copyright">&copy; Copyright 2017-2021 by Matthew Edwards, All Rights Reserved</div>\n' +
     '        <br />\n' +
     '        Third-party trademarks are the property of their respective third-party owners. Presence of a third-party trademark does not mean that I have any relationship with that third-party or that the third-party endorses me or my services.\n' +
     '    </div>\n' +
