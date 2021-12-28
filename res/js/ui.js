@@ -4,7 +4,7 @@ const navTmpl = '<div class="nav-bar-wrapper js-navbar animated fadeIn">\n' +
     '                    <a href="/projects.html" class="animated bounceInLeft">Projects <span class="nav-bar-projects-pill js-navbar-projects">0</span></a>\n' +
     '                    <a href="/about.html" class="animated bounceInLeft">About Me</a>\n' +
     '                    <a href="/awards.html" class="animated bounceInLeft">Awards</a>\n' +
-    '                    <a href="/blog/" class="animated bounceInLeft">Blog</a>\n' +
+    '                    <a href="https://blog.matthewedwards.me" class="animated bounceInLeft">Blog</a>\n' +
     '                    <a href="https://www.linkedin.com/in/matthew-edwards" target="_blank" style="float:right;" class="animated bounceInRight" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fab fa-linkedin"></i></a>\n' +
     '                    <a href="https://gitlab.eecs.umich.edu/msedwar" target="_blank" style="float:right;" class="animated bounceInRight" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="GitLab"><i class="fab fa-gitlab"></i></a>\n' +
     '                    <a href="https://github.com/msedwar" target="_blank" style="float:right;" class="animated bounceInRight" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fab fa-github"></i></a>\n' +
