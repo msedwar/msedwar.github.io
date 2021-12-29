@@ -711,11 +711,36 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 /* Blog */
 
-.article-date {
-    text-align: right;
-    font-style: italic;
+.article-meta {
+    display: block;
+}
+
+.article-meta > div {
+    display: inline-block;
+}
+
+.article-author-profile-picture {
+    border-radius: 100%;
+    width: 2em;
+    height: 2em;
+    margin: 0 0.5em 0 0;
+}
+
+.article-author a {
     color: #717a82;
-    margin: 0 0 2em 0;
+}
+
+.article-categories a {
+    color: #717a82;
+}
+
+.article-meta-separator::after {
+    content: "\00B7";
+    color: #717a82;
+}
+
+.article-date {
+    color: #717a82;
 }
 
 .article-title {
@@ -762,7 +787,7 @@ div.nav-bar-wrapper.sticky div.nav-bar {
     font-size: 20px;
     color: #717a82;
     letter-spacing: 2em;
-    margin: 2em 0;
+    margin: 4em 0;
     width: 100%;
     text-align: center;
 }
@@ -773,6 +798,10 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 .article-tags-container {
     margin: 2em 0;
+}
+
+.article-tags-container > :not(:last-child) {
+    margin-right: 1em;
 }
 
 .article-tag {
@@ -845,6 +874,12 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 
 .code-block {
     font-size: 14px !important;
+}
+
+figcaption {
+    color: #717a82;
+    font-style: italic;
+    text-align: center;
 }
 
 /* Animated */
