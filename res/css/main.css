@@ -115,7 +115,16 @@ div.nav-bar-wrapper.sticky div.nav-bar {
 }
 
 .nav-bar a:hover {
+    color: #ffffff;
     background-color: #000000;
+}
+
+.nav-bar a:visited {
+    color: #ffffff;
+}
+
+.nav-bar a:focus {
+    color: #dddddd;
 }
 
 .nav-bar-projects-pill {
